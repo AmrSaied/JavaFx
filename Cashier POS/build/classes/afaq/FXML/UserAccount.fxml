@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minWidth="760.0" prefHeight="603.0" prefWidth="776.0" styleClass="mainFxmlClass" stylesheets="@../Css/useraccount.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Controller.UserAccountController">
+   <children>
+      <Pane maxHeight="40.0" maxWidth="776.0" minHeight="40.0" minWidth="650.0" prefHeight="40.0" prefWidth="776.0" styleClass="header">
+         <children>
+            <HBox layoutX="491.0" spacing="30.0">
+               <children>
+                  <Button layoutX="217.0" maxHeight="39.0" maxWidth="68.0" minHeight="39.0" minWidth="68.0" mnemonicParsing="false" onAction="#DeleteUser" prefHeight="39.0" prefWidth="68.0" styleClass="delete">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="362.0" layoutY="4.0" maxHeight="39.0" maxWidth="65.0" minHeight="39.0" minWidth="65.0" mnemonicParsing="false" onAction="#UpdataUser" prefHeight="39.0" prefWidth="65.0" styleClass="savebill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="432.0" layoutY="4.0" maxHeight="39.0" maxWidth="68.0" minHeight="39.0" minWidth="68.0" mnemonicParsing="false" onAction="#InsertUser" prefHeight="39.0" prefWidth="68.0" styleClass="new">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+            <Button layoutX="20.0" mnemonicParsing="false" onAction="#CloseScene" prefHeight="39.0" prefWidth="106.0" styleClass="closewindow">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+      <HBox layoutX="275.0" layoutY="38.0" prefHeight="200.0" prefWidth="470.0" spacing="20.0">
+         <children>
+            <Pane layoutX="75.0" layoutY="40.0" prefHeight="200.0" prefWidth="188.0">
+               <children>
+                  <VBox layoutX="7.0" layoutY="26.0" spacing="20.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="386.0" layoutY="38.0" prefHeight="200.0" prefWidth="370.0">
+               <children>
+                  <HBox layoutX="-43.0" layoutY="30.0" spacing="20.0">
+                     <children>
+                        <VBox layoutX="-77.0" layoutY="30.0" prefHeight="166.0" prefWidth="281.0" spacing="20.0">
+                           <children>
+                              <TextField fx:id="User_name" layoutX="4.0" layoutY="30.0" prefHeight="25.0" prefWidth="194.0" styleClass="txtf" />
+                              <TextField fx:id="pass" layoutX="4.0" layoutY="75.0" prefHeight="25.0" prefWidth="194.0" styleClass="txtf" />
+                              <TextArea fx:id="note" layoutX="4.0" layoutY="120.0" prefHeight="76.0" prefWidth="200.0" styleClass="txtarea" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="219.0" layoutY="30.0" spacing="30.0">
+                           <children>
+                              <Label layoutX="219.0" layoutY="30.0" prefHeight="17.0" prefWidth="73.0" text="اسم المستخدم">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="223.0" layoutY="75.0" prefHeight="20.0" prefWidth="76.0" text="الرقم السري">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="234.0" layoutY="120.0" text="ملاحظات">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <Label fx:id="CustomerN" layoutX="180.0" layoutY="272.0" text="4">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="207.0" layoutY="270.0" text="اجمالي المستخدمين" textFill="#0b4cff">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Pane layoutY="297.0" prefHeight="227.0" prefWidth="760.0">
+         <children>
+            <HBox layoutX="169.0" spacing="50.0" />
+            <HBox layoutX="14.0" layoutY="29.0" prefHeight="200.0" prefWidth="745.0" spacing="50.0">
+               <children>
+                  <VBox layoutX="14.0" layoutY="32.0" prefHeight="152.0" prefWidth="122.0" spacing="10.0">
+                     <children>
+                        <CheckBox fx:id="CB27" alignment="TOP_RIGHT" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" text="بيانات الشركة" />
+                        <CheckBox fx:id="CB28" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="24.0" layoutY="42.0" mnemonicParsing="false" text="الاعدادات" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB29" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="34.0" layoutY="52.0" mnemonicParsing="false" text="حسابات المستخدمين" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB30" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="44.0" layoutY="62.0" mnemonicParsing="false" text="انشاء نسخة احتياطية" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB31" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="54.0" layoutY="72.0" mnemonicParsing="false" text="استرجاع نسخة احتياطية" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB32" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="تصفية البيانات" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB33" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="تصفية البيانات" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB34" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="تصفية البيانات" textAlignment="RIGHT" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="147.0" layoutY="30.0" prefHeight="193.0" prefWidth="122.0" spacing="10.0">
+                     <children>
+                        <CheckBox fx:id="CB20" alignment="TOP_RIGHT" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" text="تعريف الموردين" />
+                        <CheckBox fx:id="CB21" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="24.0" layoutY="42.0" mnemonicParsing="false" text="فواتيرالموردين" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB22" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="34.0" layoutY="52.0" mnemonicParsing="false" text="تعريف العملاء" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB23" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="44.0" layoutY="62.0" mnemonicParsing="false" text="فواتيرالموردين" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB24" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="54.0" layoutY="72.0" mnemonicParsing="false" text="تقرير العملاء" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB25" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="تقرير فواتير العملاء" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB26" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="تقرير فواتير الموردين" textAlignment="RIGHT" />
+                     </children>
+                  </VBox>
+                  <HBox>
+                     <children>
+                        <VBox layoutX="348.0" layoutY="30.0" prefHeight="152.0" prefWidth="135.0" spacing="10.0">
+                           <children>
+                              <CheckBox fx:id="CB15" alignment="TOP_RIGHT" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" text="حركة الخدمات " />
+                              <CheckBox fx:id="CB16" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="24.0" layoutY="42.0" mnemonicParsing="false" text="مبيعات المستخدمين" textAlignment="RIGHT" />
+                              <CheckBox fx:id="CB17" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="34.0" layoutY="52.0" mnemonicParsing="false" text="حركة مرتجعات المشتريات" textAlignment="RIGHT" />
+                              <CheckBox fx:id="CB18" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="44.0" layoutY="62.0" mnemonicParsing="false" text="حركة مرتجعات المبيعات" textAlignment="RIGHT" />
+                              <CheckBox fx:id="CB19" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="54.0" layoutY="72.0" mnemonicParsing="false" text="تقرير عام" textAlignment="RIGHT" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="358.0" layoutY="40.0" prefHeight="152.0" prefWidth="122.0" spacing="10.0">
+                           <children>
+                              <CheckBox fx:id="CB7" alignment="TOP_RIGHT" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" text="فاتورة مشتريات" />
+                              <CheckBox fx:id="CB8" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="24.0" layoutY="42.0" mnemonicParsing="false" text="مرتجعات مشتريات" textAlignment="RIGHT" />
+                              <CheckBox fx:id="CB9" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="34.0" layoutY="52.0" mnemonicParsing="false" text="فاتورة المبيعات" textAlignment="RIGHT" />
+                              <CheckBox fx:id="CB10" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="44.0" layoutY="62.0" mnemonicParsing="false" text="فاتورة المبيعات -كاشير " textAlignment="RIGHT" />
+                              <CheckBox fx:id="CB11" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="54.0" layoutY="72.0" mnemonicParsing="false" text="مرتجعات مبيعات" textAlignment="RIGHT" />
+                              <CheckBox fx:id="CB12" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="فاتورة علرض اسعار" textAlignment="RIGHT" />
+                              <CheckBox fx:id="CB13" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="حركة المشتريات" textAlignment="RIGHT" />
+                              <CheckBox fx:id="CB14" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="حركة المبيعات" textAlignment="RIGHT" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox layoutX="368.0" layoutY="50.0" prefHeight="152.0" prefWidth="122.0" spacing="10.0">
+                     <children>
+                        <CheckBox fx:id="CB1" alignment="TOP_LEFT" contentDisplay="RIGHT" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" text="تعريف الاصناف" textAlignment="JUSTIFY" />
+                        <CheckBox fx:id="CB2" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="24.0" layoutY="42.0" mnemonicParsing="false" text="تعريف الخدمات" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB3" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="34.0" layoutY="52.0" mnemonicParsing="false" text="طباعة الباركود" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB4" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="44.0" layoutY="62.0" mnemonicParsing="false" text="تقرير مخزون الاصناف" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB5" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="54.0" layoutY="72.0" mnemonicParsing="false" text="تقرير حد الطلب" textAlignment="RIGHT" />
+                        <CheckBox fx:id="CB6" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="تقرير حد الانتهاء" textAlignment="RIGHT" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <TableView fx:id="tableUser" layoutX="34.0" layoutY="53.0" onMouseClicked="#Selecteditem" prefHeight="200.0" prefWidth="299.0" styleClass="S">
+        <columns>
+          <TableColumn fx:id="TUserName" prefWidth="149.0" text="اسم المستخدمين" />
+            <TableColumn fx:id="Tpassword" prefWidth="147.0" text="كلمة المرو" />
+        </columns>
+      </TableView>
+      <Pane layoutY="577.0" prefHeight="26.0" prefWidth="776.0" styleClass="header" />
+      <Label fx:id="Erromassage" layoutX="360.0" layoutY="266.0" textFill="#ee1313" />
+   </children>
+</AnchorPane>

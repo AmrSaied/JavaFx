@@ -1,0 +1,166 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+ -fx-background-image: url("../Images/bg.jpg");
+}
+.total{
+     -fx-background-image: url("../Images/Barcode-cashier_54.jpg");
+    
+    
+}
+
+.bg{
+    
+     -fx-background-color: #cef4f5;
+}
+
+ 
+
+
+.newbill{
+     -fx-background-image: url("../Images/fullcash_12.jpg");
+       -fx-background-color: #013b45;
+    
+}
+.newbill:hover{
+    
+     -fx-background-image: url("../Images/fullcash_12h.jpg");
+}
+.deletebill{
+     -fx-background-image: url("../Images/fullcash_10.jpg");
+       -fx-background-color: #013b45;
+    
+}
+.deletebill:hover{
+    
+     -fx-background-image: url("../Images/fullcash_10h.jpg");
+}
+.printbill{
+     -fx-background-image: url("../Images/fullcash_08.jpg");
+       -fx-background-color: #013b45;
+    
+}
+.printbill:hover{
+    
+     -fx-background-image: url("../Images/fullcash_08h.jpg");
+}
+.updatebill{
+     -fx-background-image: url("../Images/fullcash_06.jpg");
+       -fx-background-color: #013b45;
+    
+}
+.updatebill:hover{
+    
+     -fx-background-image: url("../Images/fullcash_06h.jpg");
+}
+.searchbill{
+     -fx-background-image: url("../Images/fullcash_04.jpg");
+       -fx-background-color: #013b45;
+    
+}
+.searchbill:hover{
+    
+     -fx-background-image: url("../Images/fullcash_04h.jpg");
+}
+.closewindow{
+     -fx-background-image: url("../Images/fullcash_02.jpg");
+       -fx-background-color: #013b45;
+}
+.closewindow:hover{
+    
+     -fx-background-image: url("../Images/fullcash_02h.jpg");
+}
+.total{
+     -fx-background-image: url("../Images/Barcode-cashier_118.jpg");
+       -fx-background-color: #013b45;
+}
+.payed{
+     -fx-background-image: url("../Images/Barcode-cashier_115.jpg");
+       -fx-background-color: #013b45;
+}
+.reminder{
+     -fx-background-image: url("../Images/Barcode-cashier_112.jpg");
+       -fx-background-color: #013b45;
+}
+
+
+.bgtoolbar{
+     -fx-background-color: #013b45;
+    
+}
+.Pane{
+   -fx-background-color: #013b45;
+}
+.Paneblue{
+   -fx-background-color: #cef4f5;
+}
+.totallabelbg{
+         -fx-background-image: url("../Images/Barcode-cashier-Recovered_18.jpg");
+       -fx-background-color: #013b45;
+}
+.totallabel{
+       -fx-background-color: #041c1c;
+       -fx-text-fill: #ffffff;
+       
+}
+.labelbillnum{
+       -fx-background-color: #454544;
+       -fx-text-fill: #ffffff;
+}
+.buttonaddservice{
+         -fx-background-image: url("../Images/Barcode-cashier_90.jpg");
+
+}
+.buttondelete{
+         -fx-background-image: url("../Images/Barcode-cashier_87.jpg");
+
+}
+.buttonadd{
+         -fx-background-image: url("../Images/Barcode-cashier_84.jpg");
+
+}
+.disprice{
+         -fx-background-image: url("../Images/buyreg.jpg");
+
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px ;
+}
+.S .column-header  {
+   -fx-background-color: #116567;
+     
+}
+
+.S .table-cell  {
+    -fx-alignment: center;
+     /* The rest is from caspian.css */
+
+    
+    -fx-padding: 0.166667em; /* 2px, plus border adds 1px */
+
+    -fx-background-color: transparent;
+    -fx-border-color: transparent -fx-table-cell-border-color transparent transparent;
+    -fx-border-width: 0.183333em; /* 1 */
+    -fx-cell-size: 5.0em; /* 24 */
+    -fx-text-fill: -fx-text-inner-color;
+      -fx-font-size: 15px ;
+     
+}
+.S .table-view:hover{
+    -fx-text-fill:#ffffff;
+    -fx-background-color:#041c1c;
+    
+}
+
+
+.customerpay{
+    
+     -fx-font-size: 20px ;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="330.0" prefWidth="325.0" styleClass="Paneblue" stylesheets="@../Css/deleteall.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Controller.DeleteAllController">
+   <children>
+      <Button layoutX="72.0" layoutY="81.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="181.0" styleClass="Pane" text="حذف جميع البيانات" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button layoutX="72.0" layoutY="186.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="181.0" styleClass="Pane" text="حذف جميع التقاير" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

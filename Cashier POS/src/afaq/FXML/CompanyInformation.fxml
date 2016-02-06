@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="374.0" maxWidth="390.0" minHeight="330.0" minWidth="344.0" prefHeight="374.0" prefWidth="390.0" styleClass="mainFxmlClass" stylesheets="@../Css/companyinformation.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Controller.CompanyInformationController">
+   <children>
+      <Pane maxHeight="40.0" maxWidth="390.0" minHeight="40.0" minWidth="344.0" prefHeight="40.0" prefWidth="390.0" styleClass="header">
+         <children>
+            <HBox layoutX="213.0" layoutY="-1.0" spacing="20.0">
+               <children>
+                  <Button layoutX="187.0" layoutY="-1.0" maxHeight="28.0" maxWidth="62.0" minHeight="39.0" minWidth="77.0" mnemonicParsing="false" onAction="#FillFiled" prefHeight="28.0" prefWidth="61.0" styleClass="updatebill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                <Button layoutX="267.0" maxHeight="39.0" maxWidth="65.0" minHeight="39.0" minWidth="65.0" mnemonicParsing="false" onAction="#UpdateFiled" prefHeight="39.0" prefWidth="65.0" styleClass="savebill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+            <Button layoutX="10.0" layoutY="-1.0" maxHeight="39.0" maxWidth="106.0" minHeight="39.0" minWidth="106.0" mnemonicParsing="false" onAction="#CloseScene" prefHeight="39.0" prefWidth="106.0" styleClass="closewindow">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="206.0" prefHeight="107.0" prefWidth="330.0" />
+      <Pane layoutY="346.0" prefHeight="28.0" prefWidth="390.0" styleClass="header" />
+      <HBox layoutX="24.0" layoutY="51.0" spacing="15.0">
+         <children>
+            <VBox layoutX="24.0" layoutY="51.0" prefHeight="251.0" prefWidth="276.0" spacing="25.0">
+               <children>
+                  <TextField fx:id="TFnameCompany" alignment="CENTER" layoutX="24.0" layoutY="51.0" prefHeight="30.0" prefWidth="224.0" styleClass="reg7">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="TFAdrees" alignment="CENTER" layoutX="24.0" layoutY="100.0" prefHeight="30.0" prefWidth="224.0" styleClass="reg7">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="TFPhone" alignment="CENTER" layoutX="24.0" layoutY="151.0" prefHeight="30.0" prefWidth="224.0" styleClass="reg7">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextArea fx:id="TFother" layoutX="24.0" layoutY="199.0" maxHeight="80.0" maxWidth="278.0" minHeight="80.0" minWidth="228.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="80.0" prefWidth="278.0" styleClass="txtarea">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </VBox>
+            <VBox layoutX="318.0" layoutY="51.0" spacing="45.0">
+               <children>
+                  <Label layoutX="268.0" layoutY="51.0" text="اسم الشركة">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="268.0" layoutY="94.0" text="العنوان">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="268.0" layoutY="137.0" text="الهاتف">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="272.0" layoutY="180.0" text="بيانات اخري">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

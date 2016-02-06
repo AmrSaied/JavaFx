@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minWidth="600.0" prefHeight="558.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Controller.BillCashierController">
+   <children>
+      <Pane maxHeight="40.0" maxWidth="650.0" minHeight="40.0" minWidth="600.0" prefHeight="40.0" prefWidth="600.0" styleClass="header">
+         <children>
+            <Button layoutX="20.0" mnemonicParsing="false" onAction="#CloseScene" prefHeight="39.0" prefWidth="106.0" styleClass="closewindow">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <HBox layoutX="388.0" spacing="30.0">
+               <children>
+                  <Button layoutX="347.0" maxHeight="39.0" maxWidth="77.0" minHeight="39.0" minWidth="77.0" mnemonicParsing="false" onAction="#Clearall" prefHeight="39.0" prefWidth="77.0" styleClass="updatebill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="486.0" maxHeight="39.0" maxWidth="91.0" minHeight="39.0" minWidth="91.0" mnemonicParsing="false" onAction="#payed" prefHeight="39.0" prefWidth="91.0" styleClass="pay">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+            <TextField fx:id="tfsearch" alignment="CENTER" layoutX="151.0" layoutY="8.0" onKeyPressed="#Search" prefHeight="25.0" prefWidth="206.0" promptText="ابحث عن اسم التاجر" />
+         </children>
+      </Pane>
+      <TableView fx:id="tableBill" layoutX="14.0" layoutY="250.0" prefHeight="215.0" prefWidth="573.0" styleClass="S">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <columns>
+            <TableColumn fx:id="databill" minWidth="50.0" prefWidth="132.0" text="تاريخ الفاتورة" />
+            <TableColumn fx:id="reprices" minWidth="50.0" prefWidth="108.0" text="المبلغ المتبقي" />
+            <TableColumn fx:id="buyprices" minWidth="50.0" prefWidth="147.0" text="المبلغ المدفوع" />
+            <TableColumn fx:id="total" minWidth="50.0" prefWidth="92.0" text="الاجمالي" />
+            <TableColumn fx:id="billNumber" minWidth="50.0" prefWidth="77.0" text="رقم الفاتورة" />
+         </columns>
+      </TableView>
+      <VBox layoutX="300.0" layoutY="63.0" spacing="20.0">
+         <children>
+            <HBox layoutX="4.0" layoutY="30.0" prefHeight="25.0" prefWidth="279.0" spacing="30.0">
+               <children>
+                  <ComboBox fx:id="comboBox1" prefWidth="150.0" />
+                  <Label layoutX="216.0" layoutY="34.0" prefHeight="20.0" prefWidth="82.0" text="اسم التاجر">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="40.0" prefHeight="25.0" prefWidth="279.0" spacing="30.0">
+               <children>
+                  <ComboBox fx:id="comboBox2" prefWidth="150.0" />
+                  <Label layoutX="216.0" layoutY="34.0" text="نوع الفاتورة">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="267.0" layoutY="161.0" prefHeight="20.0" prefWidth="187.0" spacing="50.0">
+         <children>
+            <Label layoutX="392.0" layoutY="165.0" prefHeight="20.0" prefWidth="161.0" text="عرض كل الفواتير">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Label>
+            <RadioButton fx:id="rb1" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="485.0" layoutY="165.0" mnemonicParsing="false" styleClass="red-radio-button" />
+         </children>
+      </HBox>
+      <HBox layoutX="7.0" layoutY="199.0" spacing="20.0" styleClass="red-radio-button">
+         <children>
+            <DatePicker fx:id="Datepicker4" />
+            <Label layoutX="392.0" layoutY="165.0" text="الي" />
+            <DatePicker fx:id="Datepicker3" />
+            <RadioButton fx:id="rb2" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="485.0" layoutY="165.0" mnemonicParsing="false" styleClass="blue-radio-button" />
+         </children>
+      </HBox>
+      <Button layoutX="80.0" layoutY="108.0" mnemonicParsing="false" onAction="#Show" prefHeight="30.0" prefWidth="59.0" styleClass="disp" text="عرض" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <HBox layoutX="10.0" layoutY="479.0" spacing="15.0">
+         <children>
+            <HBox layoutX="29.0" layoutY="479.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="allchange" alignment="CENTER" layoutX="29.0" layoutY="479.0" prefHeight="30.0" prefWidth="151.0" styleClass="txtf">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="199.0" layoutY="481.0" prefHeight="26.0" prefWidth="133.0" text="المبلغ المتبقى">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="341.0" layoutY="479.0" prefHeight="30.0" prefWidth="271.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="tfpayed" alignment="CENTER" layoutX="341.0" layoutY="479.0" prefHeight="30.0" prefWidth="173.0" styleClass="txtf">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="511.0" layoutY="481.0" prefHeight="26.0" prefWidth="130.0" text="المبلغ المدفوع">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <Label fx:id="Erromassage" layoutX="7.0" layoutY="63.0" prefHeight="26.0" prefWidth="268.0" textFill="#ae1d1d">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+      <Pane layoutY="529.0" prefHeight="30.0" prefWidth="600.0" styleClass="header" />
+      <Label layoutX="475.0" layoutY="198.0" text="الفاتورة من تاريخ محدد">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+   <stylesheets>
+      <URL value="@../Css/billcustomer.css" />
+      <URL value="@../Css/billcashier.css" />
+   </stylesheets>
+</AnchorPane>

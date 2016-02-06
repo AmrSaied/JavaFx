@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Afag.jnlp">
+  <information>
+    <title>Afag</title>
+    <vendor>AmrSaid</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <jfx:javafx-runtime version="2.2+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
+  </resources>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Afag.jar" size="1936008" download="eager" />
+    <jar href="lib/com.mysql.jdbc_5.1.5.jar" size="676712" download="eager" />
+    <jar href="lib/commons-beanutils-1.9.2.jar" size="233857" download="eager" />
+    <jar href="lib/commons-collections-2.1.1.jar" size="175426" download="eager" />
+    <jar href="lib/commons-collections-3.2.1.jar" size="575389" download="eager" />
+    <jar href="lib/commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib/commons-logging-api-1.1.1.jar" size="52313" download="eager" />
+    <jar href="lib/groovy-all-1.7.5.jar" size="5482221" download="eager" />
+    <jar href="lib/itext-2.1.7.jar" size="1130070" download="eager" />
+    <jar href="lib/jasperreports-5.6.1.jar" size="4969983" download="eager" />
+    <jar href="lib/jfxtras-labs-2.2-r5-SNAPSHOT.jar" size="1514739" download="eager" />
+    <jar href="lib/sample-datasource-2.2-sources.jar" size="8114" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Afag" >
+    <param name="requiredFXVersion" value="2.2+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="afaq.Afag"  name="Afag" />
+  <update check="always"/>
+</jnlp>

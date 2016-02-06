@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="390.0" maxWidth="567.0" minHeight="300.0" minWidth="400.0" prefHeight="390.0" prefWidth="567.0" styleClass="mainFxmlClass" stylesheets="@../Css/cashierservice.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Controller.CashierServiceController">
+   <children>
+      <Pane layoutY="-1.0" maxHeight="40.0" maxWidth="567.0" minHeight="40.0" minWidth="400.0" prefHeight="40.0" prefWidth="567.0" styleClass="header">
+         <children>
+            <HBox layoutX="277.0" spacing="20.0">
+               <children>
+                  <Button layoutX="247.0" maxHeight="39.0" maxWidth="63.0" minHeight="39.0" minWidth="63.0" mnemonicParsing="false" onAction="#SearchServices" prefHeight="39.0" prefWidth="63.0" styleClass="searchbill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="333.0" maxHeight="39.0" maxWidth="77.0" minHeight="39.0" minWidth="70.0" mnemonicParsing="false" onAction="#FillTable" prefHeight="39.0" prefWidth="77.0" styleClass="updatebill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="449.0" maxHeight="39.0" maxWidth="105.0" minHeight="39.0" minWidth="105.0" mnemonicParsing="false" onAction="#AddService" prefHeight="39.0" prefWidth="105.0" styleClass="servicename">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <TextField fx:id="searchEditText" alignment="CENTER" layoutX="134.0" layoutY="5.0" maxHeight="30.0" maxWidth="132.0" minHeight="20.0" minWidth="100.0" onKeyPressed="#SearchServices" prefHeight="30.0" prefWidth="132.0" promptText="ابحث عن الخدمة" styleClass="searchtxf">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
+            <Button layoutX="8.0" maxHeight="39.0" maxWidth="106.0" minHeight="39.0" minWidth="106.0" mnemonicParsing="false" onAction="#Close" prefHeight="39.0" prefWidth="106.0" styleClass="closewindow">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutY="360.0" maxHeight="30.0" maxWidth="567.0" minHeight="30.0" minWidth="400.0" prefHeight="30.0" prefWidth="567.0" styleClass="header" />
+      <Label layoutX="501.0" layoutY="55.0" maxHeight="17.0" maxWidth="32.0" minHeight="17.0" minWidth="32.0" prefHeight="17.0" prefWidth="32.0" text="الكمية">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="amount" alignment="CENTER" layoutX="396.0" layoutY="50.0" maxHeight="30.0" maxWidth="87.0" minHeight="19.0" minWidth="53.0" prefHeight="30.0" prefWidth="87.0" styleClass="amounttxf">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tableService" layoutX="14.0" layoutY="93.0" maxHeight="273.0" maxWidth="538.0" minHeight="191.0" minWidth="364.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="256.0" prefWidth="538.0" styleClass="S">
+        <columns>
+          <TableColumn fx:id="ServiceName" prefWidth="382.0" text="اسم الخدمة " />
+          <TableColumn fx:id="price" prefWidth="155.0" text="السعر" />
+        </columns>
+      </TableView>
+      <Label fx:id="Erromassage" layoutX="83.0" layoutY="49.0" textFill="#dd0303">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+/*
+ * Empty Stylesheet file.
+ */
+.mainFxmlClass{
+ -fx-background-image: url("../Images/bg3.png");
+}
+.header{
+    -fx-background-image: url("../Images/header5.png");
+}
+.footer{
+    -fx-background-image: url("../Images/footer5.png");
+}
+
+.updatebill{
+     -fx-background-image: url("../Images/fullcash_06.jpg");
+       -fx-background-color: #013b45;
+    
+}
+.updatebill:hover{
+    
+     -fx-background-image: url("../Images/fullcash_06h.jpg");
+}
+.closewindow{
+     -fx-background-image: url("../Images/fullcash_02.jpg");
+       -fx-background-color: #013b45;
+}
+.closewindow:hover{
+    
+     -fx-background-image: url("../Images/fullcash_02h.jpg");
+}
+.savebill{
+     -fx-background-image: url("../Images/fullcash_13.jpg");
+       -fx-background-color: #013b45;
+    
+}
+.savebill:hover{
+    
+     -fx-background-image: url("../Images/fullcash_13h.jpg");
+}
+.reg7{
+    -fx-background-image: url("../Images/reg7.png");
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #cef4f5;
+
+}
+
+.textarea .content{
+ -fx-background-image: url("../Images/reg8.png");
+ -fx-text-fill: #ffffff;
+ -fx-background-color: #cef4f5;
+    
+}
+

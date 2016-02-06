@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="731.0" prefWidth="750.0" styleClass="mainFxmlClass" stylesheets="@../Css/billbuyed.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Controller.BillBuyedController">
+   <children>
+      <Pane maxHeight="35.0" maxWidth="750.0" minHeight="40.0" minWidth="750.0" prefHeight="35.0" prefWidth="750.0" styleClass="header">
+         <children>
+            <HBox layoutX="274.0" spacing="10.0">
+               <children>
+                  <Button layoutX="262.0" mnemonicParsing="false" onAction="#SearchBill" prefHeight="39.0" prefWidth="63.0" styleClass="searchbill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="350.0" mnemonicParsing="false" onAction="#print" prefHeight="39.0" prefWidth="69.0" styleClass="printbill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="425.0" layoutY="-0.0" mnemonicParsing="false" onAction="#InsertBill" prefHeight="39.0" prefWidth="65.0" styleClass="savebill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="502.0" mnemonicParsing="false" onAction="#RemoveBill" prefHeight="39.0" prefWidth="114.0" styleClass="deletebill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button layoutX="624.0" layoutY="-0.0" maxHeight="339.0" maxWidth="112.0" minHeight="39.0" minWidth="112.0" mnemonicParsing="false" onAction="#InsertBill" prefHeight="39.0" prefWidth="112.0" styleClass="newbill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+            <Button layoutX="20.0" mnemonicParsing="false" onAction="#CloseScene" prefHeight="39.0" prefWidth="106.0" styleClass="closewindow">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <TextField fx:id="SearchBillN" alignment="CENTER" layoutX="139.0" layoutY="7.0" onKeyReleased="#SearchBill" prefHeight="25.0" prefWidth="128.0" promptText="ادخل رقم الفاتورة">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <HBox layoutX="376.0" layoutY="38.0" prefHeight="200.0" prefWidth="300.0" spacing="30.0">
+         <children>
+            <Pane layoutX="75.0" layoutY="40.0" prefHeight="200.0" prefWidth="300.0">
+               <children>
+                  <VBox layoutX="7.0" layoutY="26.0" spacing="20.0" />
+                  <HBox layoutX="70.0" layoutY="26.0" prefHeight="25.0" prefWidth="279.0" spacing="30.0">
+                     <children>
+                        <TextField fx:id="BillNumber" alignment="CENTER" layoutX="48.0" layoutY="30.0" prefHeight="25.0" prefWidth="194.0" styleClass="labelbillnum">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="216.0" layoutY="34.0" prefHeight="17.0" prefWidth="80.0" text="رقم الفاتورة">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="70.0" layoutY="71.0" prefHeight="25.0" prefWidth="279.0" spacing="30.0">
+                     <children>
+                        <ComboBox fx:id="comboBox1" prefHeight="25.0" prefWidth="199.0" />
+                        <Label layoutX="216.0" layoutY="34.0" prefHeight="17.0" prefWidth="81.0" text="اسم المورد">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="70.0" layoutY="116.0" prefHeight="25.0" prefWidth="279.0" spacing="30.0">
+                     <children>
+                        <DatePicker fx:id="Datepicker2" prefHeight="25.0" prefWidth="193.0" />
+                        <Label layoutX="216.0" layoutY="34.0" prefHeight="20.0" prefWidth="93.0" text="تاريخ الفانورة">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <TableView fx:id="tablebuyed" layoutX="15.0" layoutY="464.0" onKeyPressed="#RemoveRowByDelete" prefHeight="231.0" prefWidth="724.0" styleClass="S">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <columns>
+            <TableColumn fx:id="Ttotal" minWidth="50.0" prefWidth="140.0" text="المجموع" />
+            <TableColumn fx:id="TPrice_Sell" minWidth="50.0" prefWidth="140.0" text="سعر الشراء" />
+            <TableColumn fx:id="Tamount" prefWidth="75.0" text="الكمية" />
+            <TableColumn fx:id="Tname" minWidth="50.0" prefWidth="140.0" text="اسم الصنف" />
+            <TableColumn fx:id="Tbarcode" minWidth="50.0" prefWidth="163.0" text="الباركود" />
+         </columns>
+      </TableView>
+      <Pane layoutX="421.0" layoutY="233.0" prefHeight="158.0" prefWidth="300.0">
+         <children>
+            <VBox layoutX="25.0" layoutY="30.0" spacing="20.0">
+               <children>
+                  <HBox layoutX="4.0" layoutY="30.0" prefHeight="25.0" prefWidth="279.0" spacing="30.0">
+                     <children>
+                        <TextField fx:id="barcodenumber" alignment="CENTER" layoutX="48.0" layoutY="30.0" onKeyPressed="#SearchBarCode" prefHeight="25.0" prefWidth="194.0" styleClass="labelbillnum">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></TextField>
+                        <Label layoutX="216.0" layoutY="34.0" prefHeight="25.0" text="الباركود">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="14.0" layoutY="40.0" prefHeight="25.0" prefWidth="279.0" spacing="30.0">
+                     <children>
+                        <TextField fx:id="namebar" alignment="CENTER" layoutX="48.0" layoutY="30.0" prefHeight="25.0" prefWidth="194.0" styleClass="labelbillnum">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></TextField>
+                        <Label layoutX="216.0" layoutY="34.0" prefHeight="25.0" text="الصنف">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="24.0" layoutY="50.0" prefHeight="25.0" prefWidth="279.0" spacing="30.0">
+                     <children>
+                        <TextField fx:id="amount" alignment="CENTER" layoutX="48.0" layoutY="30.0" onKeyPressed="#SearchBarCode" prefHeight="25.0" prefWidth="194.0" styleClass="labelbillnum">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></TextField>
+                        <Label layoutX="216.0" layoutY="34.0" prefHeight="25.0" text="الكمية">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <HBox layoutX="4.0" layoutY="300.0" spacing="15.0" />
+      <HBox layoutX="13.0" layoutY="335.0" spacing="10.0">
+         <children>
+            <Label fx:id="totalAmout" alignment="CENTER" contentDisplay="BOTTOM" layoutX="13.0" layoutY="323.0" prefHeight="34.0" prefWidth="130.0" styleClass="disprice" textAlignment="CENTER" textFill="#392525">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="130.0" layoutY="323.0" prefHeight="34.0" text="المجموع">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Pane layoutX="4.0" layoutY="38.0" prefHeight="207.0" prefWidth="335.0">
+         <children>
+            <Pane layoutX="18.0" layoutY="14.0" prefHeight="158.0" prefWidth="300.0">
+               <children>
+                  <HBox layoutY="51.0" spacing="20.0">
+                     <children>
+                        <VBox layoutY="51.0" spacing="25.0">
+                           <children>
+                              <TextField fx:id="total" alignment="CENTER" layoutY="51.0" prefHeight="25.0" prefWidth="194.0" styleClass="labelbillnum">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="payed" alignment="CENTER" layoutY="128.0" onKeyPressed="#CahngedMethod" prefHeight="25.0" prefWidth="194.0" styleClass="labelbillnum">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="change" alignment="CENTER" layoutY="173.0" prefHeight="25.0" prefWidth="194.0" styleClass="labelbillnum">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="204.0" layoutY="53.0" spacing="20.0">
+                           <children>
+                              <Label layoutX="239.0" layoutY="53.0" prefHeight="34.0" text="الاجمالي">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="204.0" layoutY="128.0" prefHeight="34.0" prefWidth="95.0" text="المبلغ المدفوع">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="224.0" layoutY="173.0" prefHeight="34.0" text="المتبقي">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="12.0" layoutY="2.0" spacing="30.0">
+                     <children>
+                        <RadioButton fx:id="rb2" layoutX="14.0" layoutY="89.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="71.0" text="اجلة">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></RadioButton>
+                        <RadioButton fx:id="rb1" layoutX="90.0" layoutY="89.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="63.0" text="نقدية">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></RadioButton>
+                        <Label layoutX="200.0" layoutY="89.0" text="نوع الفاتورة">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <HBox layoutX="25.0" layoutY="411.0" spacing="100.0" />
+      <HBox layoutX="215.0" layoutY="305.0" spacing="10.0">
+         <children>
+            <Label fx:id="pricebuyed" alignment="CENTER" contentDisplay="BOTTOM" layoutX="213.0" layoutY="320.0" prefHeight="34.0" prefWidth="130.0" styleClass="disprice" textAlignment="CENTER" textFill="#392525">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="336.0" layoutY="320.0" prefHeight="34.0" prefWidth="79.0" text="سعر الشراء">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label layoutX="164.0" layoutY="262.0" text="الكمية المتوفرة" textFill="#056bc2">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="QTY" layoutX="74.0" layoutY="270.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="Erromassage" layoutX="350.0" layoutY="224.0" textFill="#f20404" />
+      <Button layoutX="15.0" layoutY="414.0" maxHeight="40.0" maxWidth="79.0" minHeight="36.0" minWidth="74.0" mnemonicParsing="false" onAction="#RemoveRow" prefHeight="40.0" prefWidth="77.0" styleClass="buttondelete">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="108.0" layoutY="414.0" maxHeight="39.0" maxWidth="80.0" minHeight="39.0" minWidth="80.0" mnemonicParsing="false" onAction="#AddtoTable" prefHeight="39.0" prefWidth="80.0" styleClass="savedservice">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Pane layoutY="705.0" prefHeight="26.0" prefWidth="750.0" styleClass="header">
+         <children>
+            <Label layoutX="653.0" layoutY="4.0" text="اسم المستخدم" textFill="WHITE" />
+            <Label fx:id="username" layoutX="615.0" layoutY="4.0" text="البدر" textFill="#00fffc" />
+         </children></Pane>
+      <HBox layoutX="215.0" layoutY="367.0" spacing="10.0">
+         <children>
+            <Label fx:id="Selllbuyed" alignment="CENTER" contentDisplay="BOTTOM" layoutX="204.0" layoutY="379.0" prefHeight="34.0" prefWidth="130.0" styleClass="disprice" textAlignment="CENTER" textFill="#392525">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="310.0" layoutY="379.0" prefHeight="34.0" prefWidth="79.0" text="سعر البيع">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

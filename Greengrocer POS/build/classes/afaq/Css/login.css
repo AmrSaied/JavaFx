@@ -1,0 +1,22 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-background-color: #ffffff;
+}
+.pic {
+-fx-background-image: url("../Images/loginpic.png");
+-fx-background-color: #ffffff;
+}
+.wordlogin {
+-fx-background-image: url("../Images/loginword.png");
+-fx-background-color: #ffffff;
+}
+.reg {
+-fx-background-image: url("../Images/loginhreg.png");
+-fx-text-fill: #ffffff;
+-fx-background-color: #ffffff;
+}
+
+

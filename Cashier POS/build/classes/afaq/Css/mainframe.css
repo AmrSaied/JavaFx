@@ -1,0 +1,68 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass{
+ -fx-background-image: url("../Images/mainf.png");
+}
+.warehouse{
+    -fx-background-image: url("../Images/main_06.jpg");
+}
+.bills{
+    -fx-background-image: url("../Images/main_05.jpg");
+}
+.customesrs{
+    -fx-background-image: url("../Images/main_04.jpg");
+}
+.moneypbag{
+    -fx-background-image: url("../Images/main_03.jpg");
+}
+.setting{
+    -fx-background-image: url("../Images/main_02.jpg");
+}
+.help{
+    -fx-background-image: url("../Images/main_01.jpg");
+}
+.companybg{
+    -fx-background-image: url("../Images/Mainmenu7.jpg");
+}
+.footer{
+    -fx-background-image: url("../Images/Mainmenu8.jpg");
+}
+.turnof{
+    -fx-background-image: url("../Images/turnoff.jpg");
+	-fx-background-color:#252525;
+}
+.turnof:hover{
+    -fx-background-image: url("../Images/turnoffh.jpg");
+	-fx-background-color:#252525;
+}
+.logout{
+    -fx-background-image: url("../Images/logout.jpg");
+	-fx-background-color:#252525;
+}
+.logout:hover{
+    -fx-background-image: url("../Images/logouth.jpg");
+	-fx-background-color:#252525;
+}
+
+.menu-item .label {
+    -fx-text-fill: white;
+}
+
+.menu-item:focused {
+     -fx-background-color: darkgray;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: blue;
+}
+
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color: black;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 6 6 6, 0 5 5 5, 0 4 4 4;
+/*    -fx-padding: 0.666667em 0.083333em 0.666667em 0.083333em;  8 1 8 1 */
+    -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; /* 4 1 8 1 */
+}

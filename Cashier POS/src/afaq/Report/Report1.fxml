@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Report.Report1Controller">
+    <stylesheets>
+        <URL value="@/afaq/Css/report1.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tablebuyed" layoutX="18.0" layoutY="250.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="319.0" prefWidth="565.0">
+         <columns>
+            <TableColumn fx:id="Tbarcode" prefWidth="93.0" text="الباركود" />
+            <TableColumn fx:id="Tname" minWidth="0.0" prefWidth="93.0" text="اسم الصنف" />
+            <TableColumn fx:id="Tamount" prefWidth="93.0" text="الكمية " />
+            <TableColumn fx:id="TPrice_buy" prefWidth="93.0" text="قيمة رصيد البيع" />
+            <TableColumn fx:id="TPrice_Sell" prefWidth="93.0" text="قيمة رصيد الشراء" />
+            <TableColumn fx:id="Ttotal" prefWidth="94.0" text="الربح المتوقع" />
+         </columns>
+      </TableView>
+      <Label layoutX="228.0" layoutY="93.0" text="تقرير مخزون الاصناف">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <HBox layoutX="267.0" layoutY="14.0" spacing="20.0">
+         <children>
+            <Button layoutX="284.0" layoutY="11.0" mnemonicParsing="false" onAction="#SearchParcode" text="عرض" />
+            <TextField fx:id="TFbarcode" layoutX="365.0" layoutY="11.0" />
+            <Label layoutX="546.0" layoutY="6.0" text="البحث علي الصنف" />
+         </children>
+      </HBox>
+      <Label layoutX="228.0" layoutY="214.0" prefHeight="17.0" prefWidth="106.0" text="رصيد المخزون حتي  " />
+      <Label fx:id="Ldate" layoutX="27.0" layoutY="214.0" />
+      <Label fx:id="sumt" layoutX="51.0" layoutY="578.0" text="Label" />
+      <Label fx:id="sumb" layoutX="136.0" layoutY="578.0" text="Label" />
+      <Label fx:id="sums" layoutX="239.0" layoutY="578.0" text="Label" />
+   </children>
+</AnchorPane>

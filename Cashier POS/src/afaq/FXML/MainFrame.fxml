@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="768.0" maxWidth="1024.0" minHeight="768.0" minWidth="1024.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="768.0" prefWidth="1024.0" stylesheets="@../Css/mainframe.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Controller.MainFrameController">
+   <children>
+      <Pane layoutY="-0.0" maxHeight="101.0" maxWidth="1024.0" minHeight="101.0" minWidth="1024.0" prefHeight="101.0" prefWidth="1024.0">
+         <children>
+            <MenuButton maxHeight="101.0" maxWidth="167.0" minHeight="101.0" minWidth="167.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="101.0" prefWidth="167.0" styleClass="warehouse">
+              <items>
+                <MenuItem fx:id="mi1" mnemonicParsing="false" onAction="#InserData" text="تعريف الاصناف">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="I" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="mi2" mnemonicParsing="false" onAction="#InserService" text="تعريف الخدمات">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi3" mnemonicParsing="false" onAction="#printBarcode" text="طباعة ملصقات الباركود     ">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="B" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="mi4" mnemonicParsing="false" onAction="#Report1" text="تقارير مخزون الاصناف">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT1" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi5" mnemonicParsing="false" onAction="#Report2" text="تقرير حد الطلب">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT2" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi6" mnemonicParsing="false" onAction="#Report3" text="تقرير تاريخ الانتهاء">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT3" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="167.0" maxHeight="101.0" maxWidth="168.0" minHeight="101.0" minWidth="168.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="101.0" prefWidth="168.0" styleClass="bills">
+               <items>
+                  <MenuItem fx:id="mi7" mnemonicParsing="false" onAction="#BillBuyed" text="فاتورة مشتريات">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F1" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi8" mnemonicParsing="false" onAction="#ReBuyed" text="مرتجعات المشتريات">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F2" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi9" mnemonicParsing="false" onAction="#Billseller" text="فاتورة مبيعات ">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F3" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi10" mnemonicParsing="false" onAction="#FullCashier" text="فاتورة مبيعات-كاشير">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F4" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi11" mnemonicParsing="false" onAction="#ReSeller" text="مرتجعات المبيعات">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F5" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi12" mnemonicParsing="false" onAction="#BillTestItem" text="فاتورة علرض اسعار ">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F6" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="mi13" mnemonicParsing="false" onAction="#Report4" text="تقارير حركة المشتريات      ">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT4" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi14" mnemonicParsing="false" onAction="#Report5" text="تقارير حركة المبيعات">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT5" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi15" mnemonicParsing="false" onAction="#Report6" text="تقارير حركة الخدمات">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT6" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi16" mnemonicParsing="false" onAction="#Report7" text="تقارير مبيعات المستخدمين">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT7" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi17" mnemonicParsing="false" onAction="#Report8" text="تقارير مرتجعات المشتريات">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT8" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi18" mnemonicParsing="false" onAction="#Report9" text="تقارير مرتجعات المبيعات">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="DIGIT9" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </MenuButton>
+            <MenuButton layoutX="335.0" maxHeight="101.0" maxWidth="228.0" minHeight="101.0" minWidth="228.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="101.0" prefWidth="228.0" styleClass="customesrs">
+               <items>
+                  <MenuItem fx:id="mi20" mnemonicParsing="false" onAction="#DefineSeller" text="تعريف الموردين">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F7" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi21" mnemonicParsing="false" onAction="#BillCashier" text="فواتير الموردين">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F8" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi22" mnemonicParsing="false" onAction="#DefineCustomer" text="تعريف العملاء ">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F9" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi23" mnemonicParsing="false" onAction="#BillCustomer" text="فواتير العملاء">
+                     <accelerator>
+                        <KeyCodeCombination alt="ANY" code="F10" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="mi24" mnemonicParsing="false" onAction="#Report11" text="تقرير الموردين">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F11" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi25" mnemonicParsing="false" onAction="#Report12" text="تقرير العملاء">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F12" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi26" mnemonicParsing="false" onAction="#Report14" text="تقرير فواتير الموردين                       ">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="F11" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi27" mnemonicParsing="false" onAction="#Report13" text="تقرير فواتير العملاء">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="F12" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </MenuButton>
+            <MenuButton layoutX="563.0" maxHeight="101.0" maxWidth="153.0" minHeight="101.0" minWidth="153.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="101.0" prefWidth="153.0" styleClass="moneypbag">
+               <items>
+                  <MenuItem fx:id="mi28" mnemonicParsing="false" text="عرض الخزينة            ">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </MenuButton>
+            <MenuButton layoutX="716.0" maxHeight="101.0" maxWidth="155.0" minHeight="101.0" minWidth="155.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="101.0" prefWidth="155.0" styleClass="setting">
+               <items>
+                  <MenuItem fx:id="mi30" mnemonicParsing="false" onAction="#CompanyInformation" text="بيانات الشركة             ">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="DIGIT1" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="mi32" mnemonicParsing="false" onAction="#UserAccount" text="حسابات المستخدمين">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="DIGIT3" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </MenuButton>
+            <MenuButton layoutX="871.0" maxHeight="101.0" maxWidth="153.0" minHeight="101.0" minWidth="153.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="101.0" prefWidth="153.0" styleClass="help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#calc" text="الة حاسبة            ">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="C" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#aboutus" text="عن البرنامج">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </MenuButton>
+         </children>
+      </Pane>
+      <Label layoutY="101.0" maxHeight="627.0" maxWidth="1024.0" minHeight="627.0" minWidth="1024.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="627.0" prefWidth="1024.0" styleClass="companybg" />
+      <Pane layoutX="-0.0" layoutY="728.0" prefHeight="40.0" prefWidth="1024.0" styleClass="footer">
+         <children>
+            <HBox layoutX="550.0" layoutY="4.0" spacing="10.0">
+               <children>
+                  <Label layoutX="431.0" layoutY="5.0" prefHeight="30.0" prefWidth="89.0" text="اسم المستخدم :-" textFill="#e90000">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="username" layoutX="533.0" layoutY="5.0" prefHeight="30.0" prefWidth="86.0" text="البدر" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="270.0" layoutY="4.0" spacing="10.0">
+               <children>
+                  <Label layoutX="201.0" layoutY="5.0" prefHeight="30.0" prefWidth="45.0" text="الوقت:-" textFill="#e90000">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="248.0" layoutY="5.0" prefHeight="30.0" prefWidth="57.0" text="10:20:30" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="318.0" layoutY="5.0" prefHeight="30.0" prefWidth="21.0" text="ص" textFill="#e90000">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="36.0" layoutY="4.0" spacing="10.0">
+               <children>
+                  <Label layoutX="36.0" layoutY="5.0" prefHeight="30.0" prefWidth="51.0" text="التاريخ:-" textFill="#e90000">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="datenow" layoutX="98.0" layoutY="5.0" prefHeight="30.0" prefWidth="74.0" text="18/3/2015" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="850.0" layoutY="4.0" spacing="10.0">
+               <children>
+                  <Label layoutX="797.0" layoutY="4.0" prefHeight="30.0" prefWidth="41.0" text="اليوم:-" textFill="#e90000">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="899.0" layoutY="4.0" prefHeight="30.0" prefWidth="74.0" text="الاربعاء" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Button layoutX="822.0" layoutY="145.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#CloseScene" prefHeight="49.0" prefWidth="202.0" styleClass="turnof">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="822.0" layoutY="235.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#logout" prefHeight="49.0" prefWidth="202.0" styleClass="logout">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

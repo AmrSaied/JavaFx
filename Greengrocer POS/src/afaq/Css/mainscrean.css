@@ -1,0 +1,58 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+   -fx-background-image: url("../Images/Barcode-cashier.jpg");
+
+}
+.rich-blue {
+    -fx-background-color: #036e26;
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 15,5,10,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: #f5f727;
+    -fx-font-size:20px;
+     -fx-font-weight: bold;
+     -fx-border-radius:15,5,10,2;
+     -fx-opacity: 0.7; 
+}
+.rich-blue:hover {
+  
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 1);
+}
+.rich-blue:focused{
+   -fx-border-width: 2px;
+   -fx-border-color: #000000;
+}
+.record-sales {
+    -fx-text-fill: #ffffff;
+    -fx-opacity: 0.6; 
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 10;
+    -fx-background-color: #000000;
+      
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    
+    -fx-font-size: 20px;
+}
+.record-sales:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903baa 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+}
+
+.record-sales:focused{
+     -fx-background-radius: 10;
+     -fx-border-radius: 10;
+     -fx-border-width: 2px;
+    -fx-border-color: #041c1c;
+}
+.record-sales Text {
+    -fx-fill: white;
+    -fx-effect: dropshadow( gaussian , #a30000 , 0,0,0,2 );
+}

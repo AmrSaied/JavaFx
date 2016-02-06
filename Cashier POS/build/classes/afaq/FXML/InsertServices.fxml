@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="456.0" maxWidth="700.0" minHeight="400.0" minWidth="500.0" prefHeight="456.0" prefWidth="640.0" styleClass="mainFxmlClass" stylesheets="@../Css/insertservices.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Controller.InsertServicesController">
+   <children>
+      <Pane layoutY="-1.0" maxHeight="40.0" maxWidth="700.0" minHeight="40.0" minWidth="562.0" prefHeight="40.0" prefWidth="640.0" styleClass="header">
+         <children>
+            <HBox layoutX="251.0" spacing="10.0">
+               <children>
+                  <Button layoutX="205.0" maxHeight="39.0" maxWidth="63.0" minHeight="39.0" minWidth="63.0" mnemonicParsing="false" onAction="#SearchServices" prefHeight="39.0" prefWidth="63.0" styleClass="searchbill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="274.0" maxHeight="39.0" maxWidth="77.0" minHeight="39.0" minWidth="77.0" mnemonicParsing="false" onAction="#updataitem" prefHeight="39.0" prefWidth="77.0" styleClass="updatebill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="353.0" maxHeight="39.0" maxWidth="68.0" minHeight="39.0" minWidth="68.0" mnemonicParsing="false" onAction="#Deleteitem" prefHeight="39.0" prefWidth="68.0" styleClass="delete">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="462.0" maxHeight="39.0" maxWidth="65.0" minHeight="39.0" minWidth="65.0" mnemonicParsing="false" onAction="#insertDataDB" prefHeight="39.0" prefWidth="65.0" styleClass="savebill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="550.0" maxHeight="39.0" maxWidth="68.0" minHeight="39.0" minWidth="68.0" mnemonicParsing="false" onAction="#Claerall" prefHeight="39.0" prefWidth="68.0" styleClass="new">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <TextField fx:id="searchEditText" alignment="CENTER" layoutX="132.0" layoutY="6.0" maxHeight="29.0" maxWidth="180.0" minHeight="20.0" minWidth="77.0" onKeyPressed="#SearchServices" prefHeight="29.0" prefWidth="111.0">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </TextField>
+            <Button layoutX="13.0" maxHeight="39.0" maxWidth="106.0" minHeight="39.0" minWidth="106.0" mnemonicParsing="false" onAction="#Close" prefHeight="39.0" prefWidth="106.0" styleClass="closewindow">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></Pane>
+      <Label alignment="CENTER_RIGHT" layoutX="558.0" layoutY="51.0" maxHeight="20.0" maxWidth="50.0" minHeight="20.0" minWidth="50.0" prefHeight="20.0" prefWidth="50.0" text="اسم الخدمة">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="560.0" layoutY="150.0" maxHeight="20.0" maxWidth="47.0" minHeight="20.0" minWidth="38.0" prefHeight="20.0" prefWidth="47.0" text="ملاحظات">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="560.0" layoutY="95.0" maxHeight="20.0" maxWidth="53.0" minHeight="20.0" minWidth="53.0" prefHeight="20.0" prefWidth="53.0" text="السعر" textFill="#19339a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="ServiceName" alignment="CENTER" layoutX="231.0" layoutY="50.0" maxHeight="26.0" maxWidth="315.0" minHeight="26.0" minWidth="222.0" prefHeight="26.0" prefWidth="315.0" styleClass="servicenamereg">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="price" alignment="CENTER" layoutX="415.0" layoutY="92.0" maxHeight="34.0" maxWidth="130.0" minHeight="34.0" minWidth="130.0" prefHeight="34.0" prefWidth="130.0" styleClass="disprice">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></TextField>
+      <Pane layoutY="433.0" maxHeight="23.0" maxWidth="700.0" minHeight="23.0" minWidth="562.0" prefHeight="23.0" prefWidth="640.0" styleClass="header" />
+      <TableView fx:id="tableService" layoutX="13.0" layoutY="212.0" maxHeight="211.0" maxWidth="654.0" minHeight="165.0" minWidth="414.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#Selecteditem" prefHeight="189.0" prefWidth="611.0" styleClass="S">
+        <columns>
+          <TableColumn fx:id="TServiceName" maxWidth="477.0" minWidth="156.0" prefWidth="305.0" text="اسم الخدمة" />
+            <TableColumn fx:id="Tprice" maxWidth="330.0" minWidth="59.0" prefWidth="302.0" text="السعر" />
+        </columns>
+      </TableView>
+      <Label layoutX="528.0" layoutY="408.0" maxHeight="15.0" maxWidth="85.0" minHeight="15.0" minWidth="85.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="15.0" prefWidth="85.0" text="اجمالى الخدمات:-" textFill="#035e6b">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="ServiceN" alignment="CENTER" layoutX="429.0" layoutY="409.0" maxHeight="13.0" maxWidth="57.0" minHeight="13.0" minWidth="57.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="13.0" prefWidth="57.0">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="Note" layoutX="231.0" layoutY="144.0" maxHeight="57.0" maxWidth="315.0" minHeight="57.0" minWidth="222.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="57.0" prefWidth="315.0" text="&#10;">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="52.0" layoutY="48.0" maxHeight="280.0" maxWidth="311.0" minHeight="128.0" minWidth="98.0" prefHeight="141.0" prefWidth="98.0" styleClass="imaage" />
+      <Label fx:id="Erro_Massage" layoutX="186.0" layoutY="101.0" prefHeight="17.0" prefWidth="154.0" textFill="#d00a0a">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

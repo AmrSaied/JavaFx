@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Report.Report2Controller">
+   <children>
+      <TableView fx:id="tablebuyed" layoutX="18.0" layoutY="250.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="319.0" prefWidth="565.0">
+         <columns>
+            <TableColumn fx:id="Tbarcode" minWidth="0.0" prefWidth="140.0" text="الباركود" />
+            <TableColumn fx:id="Tname" minWidth="0.0" prefWidth="140.0" text="اسم الصنف" />
+            <TableColumn fx:id="Tamount" minWidth="0.0" prefWidth="140.0" text="الكمية " />
+            <TableColumn fx:id="TPrice_Sell" minWidth="0.0" prefWidth="140.0" text="حد الطلب" />
+         </columns>
+      </TableView>
+      <Label layoutX="228.0" layoutY="93.0" text="تقرير حد الطلب">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="228.0" layoutY="214.0" prefHeight="17.0" prefWidth="106.0" text="رصيد المخزون حتي  " />
+      <Label fx:id="Ldate" layoutX="27.0" layoutY="214.0" />
+      <Label fx:id="sumb" layoutX="70.0" layoutY="578.0" text="Label" />
+      <Label fx:id="sums" layoutX="239.0" layoutY="578.0" text="Label" />
+   </children>
+   <stylesheets>
+      <URL value="@/afaq/Css/report1.css" />
+   </stylesheets>
+</AnchorPane>

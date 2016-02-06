@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+.bg{
+    
+     -fx-background-color: #cef4f5;
+}
+.Pane{
+   -fx-background-color: #013b45;
+}
+.Paneblue{
+   -fx-background-color: #cef4f5;
+}

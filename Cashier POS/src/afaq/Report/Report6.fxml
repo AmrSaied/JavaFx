@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Report.Report6Controller">
+   <children>
+      <TableView fx:id="tablebuyed" layoutX="18.0" layoutY="250.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="319.0" prefWidth="565.0">
+         <columns>
+            <TableColumn fx:id="Tbarcode" prefWidth="90.0" text="رقم الفاتورة" />
+            <TableColumn fx:id="Tname" minWidth="0.0" prefWidth="90.0" text="اسم الخدمىة" />
+            <TableColumn fx:id="TPrice_buy" prefWidth="90.0" text="الكمية" />
+            <TableColumn fx:id="TPrice_Sell" prefWidth="90.0" text="سعر البيع" />
+            <TableColumn fx:id="Ttotal" prefWidth="90.0" text="المجموع" />
+            <TableColumn fx:id="datebuy" prefWidth="90.0" text="التاريخ" />
+         </columns>
+      </TableView>
+      <Label layoutX="228.0" layoutY="93.0" text="تقرير حركة الخدمات">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <HBox layoutX="195.0" layoutY="14.0" spacing="20.0">
+         <children>
+            <ComboBox fx:id="comboBox1" layoutX="374.0" layoutY="2.0" prefWidth="150.0" />
+            <Label text="اسم الخدمة" />
+         </children>
+      </HBox>
+      <HBox layoutX="1.0" layoutY="2.0" />
+      <Label layoutX="228.0" layoutY="214.0" prefHeight="17.0" prefWidth="106.0" text="رصيد المخزون حتي  " />
+      <Label fx:id="Ldate" layoutX="27.0" layoutY="214.0" />
+      <HBox layoutX="400.0" layoutY="182.0" spacing="50.0">
+         <children>
+            <Label fx:id="sumt" layoutX="51.0" layoutY="578.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="118.0" layoutY="578.0" text="مجموع المبيعات">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button layoutX="18.0" layoutY="46.0" mnemonicParsing="false" onAction="#SearchParcode" text="عرض" />
+      <HBox layoutX="114.0" layoutY="46.0" spacing="10.0">
+         <children>
+            <DatePicker fx:id="Datepicker2" layoutX="45.0" layoutY="57.0" />
+            <Label layoutX="238.0" layoutY="61.0" text="الي" />
+            <DatePicker fx:id="Datepicker" layoutX="291.0" layoutY="57.0" />
+            <Label layoutX="480.0" layoutY="61.0" text="من" />
+         </children>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@/afaq/Css/report1.css" />
+   </stylesheets>
+</AnchorPane>

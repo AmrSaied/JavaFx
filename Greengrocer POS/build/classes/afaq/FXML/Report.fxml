@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="751.0" prefWidth="829.0" style="-fx-background-image: ../Images/bg3.png;" styleClass="mainFxmlClass" stylesheets="@../Css/report.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Controller.ReportController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="944.0" prefWidth="820.0" styleClass="mainFxmlClass" stylesheets="@../Css/report.css">
+         <children>
+            <AnchorPane id="AnchorPane" layoutX="14.0" prefHeight="843.0" prefWidth="808.0" styleClass="mainFxmlClass" stylesheets="@../Css/report.css">
+               <children>
+                  <VBox layoutX="-6.0" layoutY="7.0" spacing="5.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="118.0" layoutY="57.0" spacing="10.0">
+                           <children>
+                              <Label layoutX="357.0" layoutY="57.0" text="تقارير المشتريات المدفوعة">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tableBuy" layoutX="118.0" layoutY="83.0" prefHeight="200.0" prefWidth="489.0" styleClass="S">
+                                 <columns>
+                                    <TableColumn fx:id="total_buy" prefWidth="251.0" text="السعر" />
+                                    <TableColumn fx:id="billNumber_buy" prefWidth="251.0" text="رقم الفاتورة" />
+                                 </columns>
+                              </TableView>
+                              <HBox alignment="CENTER" layoutX="285.0" layoutY="292.0" spacing="30.0">
+                                 <children>
+                                    <Label fx:id="sumbuy" layoutX="285.0" layoutY="292.0" text="0" />
+                                    <Label layoutX="435.0" layoutY="292.0" text="مجموع المشتريات">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Line endX="300.0" startX="-200.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="128.0" layoutY="67.0" spacing="10.0">
+                           <children>
+                              <Label layoutX="357.0" layoutY="57.0" text="تقارير المبيعات المدفوعة">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tableSell" layoutX="118.0" layoutY="83.0" prefHeight="200.0" prefWidth="521.0" styleClass="S">
+                                 <columns>
+                                    <TableColumn fx:id="total_Sell" prefWidth="259.0" text="السعر" />
+                                    <TableColumn fx:id="billNumber_Sell" prefWidth="246.0" text="رقم الفاتورة" />
+                                 </columns>
+                              </TableView>
+                              <HBox alignment="CENTER" layoutX="285.0" layoutY="292.0" spacing="30.0">
+                                 <children>
+                                    <Label fx:id="sumsell" layoutX="285.0" layoutY="292.0" text="0" />
+                                    <Label layoutX="435.0" layoutY="292.0" text="مجموع المبيعات">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Line endX="300.0" startX="-200.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="138.0" layoutY="77.0" spacing="10.0">
+                           <children>
+                              <Label layoutX="357.0" layoutY="57.0" text="تقارير الشيكات المستلمة">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tableCheck" layoutX="118.0" layoutY="83.0" prefHeight="200.0" prefWidth="482.0" styleClass="S">
+                                 <columns>
+                                    <TableColumn fx:id="total_Chech" prefWidth="249.0" text="السعر" />
+                                    <TableColumn fx:id="billNumber_Check" prefWidth="257.0" text="اسم صاحب الشيك" />
+                                 </columns>
+                              </TableView>
+                              <HBox alignment="CENTER" layoutX="285.0" layoutY="292.0" spacing="30.0">
+                                 <children>
+                                    <Label fx:id="sumcheck" layoutX="285.0" layoutY="292.0" text="0" />
+                                    <Label layoutX="435.0" layoutY="292.0" text="مجموع الشكات">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Line endX="300.0" startX="-200.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="515.0" layoutY="26.0" spacing="200.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="708.0" layoutY="93.0" spacing="20.0">
+                           <children>
+                              <Label layoutX="777.0" layoutY="93.0" text="من تاريخ">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="date1" layoutX="708.0" layoutY="131.0" />
+                              <Label layoutX="777.0" layoutY="202.0" text="الي تاريخ">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="date2" layoutX="718.0" layoutY="251.0" />
+                              <Button layoutX="765.0" layoutY="309.0" mnemonicParsing="false" onAction="#buyedata" text="مشاهدة التقرير" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="651.0" layoutY="581.0" spacing="20.0">
+                           <children>
+                              <Label layoutX="823.0" layoutY="585.0" text="تقارير الدين والغير مستلمة الشكات">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="708.0" layoutY="581.0" mnemonicParsing="false" onAction="#Changedata" text="مشاهدة التقرير" />
+                           </children>
+                        </VBox>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buyedmony" text="اعادة تحميل" />
+                        <HBox layoutX="699.0" layoutY="785.0" spacing="50.0" visible="false">
+                           <children>
+                              <Label layoutX="751.0" layoutY="785.0" text="0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="885.0" layoutY="785.0" text="المجموع النهائي">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

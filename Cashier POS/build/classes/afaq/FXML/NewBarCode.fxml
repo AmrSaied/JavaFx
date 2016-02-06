@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="428.0" maxWidth="410.0" minHeight="367.0" minWidth="344.0" prefHeight="428.0" prefWidth="410.0" styleClass="mainFxmlClass" stylesheets="@../Css/newbarcode.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Controller.NewBarCodeController">
+   <children>
+      <Pane maxHeight="40.0" maxWidth="410.0" minHeight="40.0" minWidth="344.0" prefHeight="40.0" prefWidth="410.0" styleClass="header">
+         <children>
+            <HBox layoutX="205.0" spacing="30.0">
+               <children>
+                  <Button layoutX="180.0" maxHeight="39.0" maxWidth="90.0" minHeight="39.0" minWidth="90.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="90.0" styleClass="deleteor">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="314.0" maxHeight="39.0" maxWidth="70.0" minHeight="39.0" minWidth="70.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="70.0" styleClass="printbill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Label layoutX="339.0" layoutY="63.0" text="الباركود">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="339.0" layoutY="108.0" text="اسم الصنف">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="339.0" layoutY="153.0" text="سعر البيع">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="339.0" layoutY="203.0" text="الكمية">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField alignment="CENTER" layoutX="36.0" layoutY="59.0" maxHeight="25.0" maxWidth="287.0" minHeight="25.0" minWidth="196.0" prefHeight="25.0" prefWidth="287.0" styleClass="labelbillnum">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <TextField alignment="CENTER" layoutX="36.0" layoutY="104.0" maxHeight="25.0" maxWidth="287.0" minHeight="25.0" minWidth="196.0" prefHeight="25.0" prefWidth="287.0" styleClass="labelbillnum">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField alignment="CENTER" layoutX="194.0" layoutY="149.0" maxHeight="34.0" maxWidth="130.0" minHeight="34.0" minWidth="130.0" prefHeight="34.0" prefWidth="130.0" styleClass="disprice">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></TextField>
+      <TextField alignment="CENTER" layoutX="210.0" layoutY="202.0" maxHeight="25.0" maxWidth="114.0" minHeight="25.0" minWidth="100.0" prefHeight="25.0" prefWidth="114.0" styleClass="amount">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></TextField>
+      <Pane layoutY="405.0" maxHeight="23.0" maxWidth="410.0" minHeight="23.0" minWidth="334.0" prefHeight="23.0" prefWidth="410.0" styleClass="header" />
+      <Label alignment="CENTER" layoutX="114.0" layoutY="264.0" maxHeight="100.0" maxWidth="160.0" minHeight="100.0" minWidth="140.0" prefHeight="100.0" prefWidth="160.0" styleClass="barcodereg" text="0.00000">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

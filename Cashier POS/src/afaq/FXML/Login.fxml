@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="200.0" maxWidth="400.0" minHeight="200.0" minWidth="400.0" prefHeight="200.0" prefWidth="400.0" styleClass="mainFxmlClass" stylesheets="@../Css/login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Controller.LoginController">
+   <children>
+      <Label maxHeight="200.0" maxWidth="133.0" minHeight="200.0" minWidth="133.0" prefHeight="200.0" prefWidth="133.0" styleClass="pic" />
+      <Label layoutX="169.0" maxHeight="63.0" maxWidth="231.0" minHeight="63.0" minWidth="231.0" prefHeight="63.0" prefWidth="231.0" styleClass="wordlogin" />
+      <TextField fx:id="username" alignment="CENTER" layoutX="170.0" layoutY="94.0" maxHeight="23.0" maxWidth="201.0" minHeight="23.0" minWidth="201.0" onKeyPressed="#Login" prefHeight="23.0" prefWidth="201.0" promptText="اسم المستخدم" styleClass="reg">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="password" alignment="CENTER" layoutX="170.0" layoutY="143.0" maxHeight="23.0" maxWidth="201.0" minHeight="23.0" minWidth="201.0" onKeyPressed="#Login" prefHeight="23.0" prefWidth="201.0" promptText="كلمة المرور" styleClass="reg">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="erro" layoutX="159.0" layoutY="55.0" prefHeight="17.0" prefWidth="241.0" textFill="#eb0909" />
+   </children>
+</AnchorPane>

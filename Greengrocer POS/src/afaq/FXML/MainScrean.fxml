@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="758.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Controller.MainScreanController">
+    <stylesheets>
+        <URL value="@../Css/mainscrean.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="765.0" layoutY="93.0" spacing="20.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <Button fx:id="btn" layoutX="775.0" layoutY="25.0" mnemonicParsing="false" onAction="#btnCustomer" prefHeight="67.0" prefWidth="221.0" styleClass="rich-blue" text="الزبائن" textFill="#83aa26">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font></Button>
+            <Button layoutX="785.0" layoutY="35.0" mnemonicParsing="false" onAction="#btnSeller" prefHeight="67.0" prefWidth="221.0" styleClass="rich-blue" text="التجار" />
+            <Button mnemonicParsing="false" onAction="#btnCheck" prefHeight="67.0" prefWidth="221.0" styleClass="rich-blue" text="الشيكات" />
+            <Button layoutX="795.0" layoutY="45.0" mnemonicParsing="false" onAction="#btnSetting" prefHeight="67.0" prefWidth="221.0" styleClass="rich-blue" text="الاعدادات" />
+            <Button mnemonicParsing="false" onAction="#logout" prefHeight="67.0" prefWidth="221.0" styleClass="rich-blue" text="تسجيل الخروج" />
+            <Button mnemonicParsing="false" onAction="#close" prefHeight="67.0" prefWidth="221.0" styleClass="rich-blue" text="اغلاق البرنامج" />
+         </children>
+      </VBox>
+      <AnchorPane fx:id="A1" prefHeight="786.0" prefWidth="760.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <VBox layoutX="20.0" layoutY="46.0" spacing="50.0">
+               <children>
+                  <Button layoutX="125.0" layoutY="54.0" mnemonicParsing="false" onAction="#DefineCustomer" prefHeight="58.0" prefWidth="721.0" styleClass="record-sales" text="أضافة  و تعديل الزبائن" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="39.0" />
+                  <Button mnemonicParsing="false" onAction="#BillCustomer" prefHeight="58.0" prefWidth="721.0" styleClass="record-sales" text="فواتير الزبائن" />
+                  <Button mnemonicParsing="false" onAction="#Billseller" prefHeight="58.0" prefWidth="721.0" styleClass="record-sales" text="طلب بيع جديد" />
+                  <Line endX="720.0" fill="#1e1d1d" startX="-0.0" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="A2" layoutX="10.0" layoutY="10.0" prefHeight="786.0" prefWidth="760.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <VBox layoutX="20.0" layoutY="46.0" spacing="50.0">
+               <children>
+                  <Button layoutX="125.0" layoutY="54.0" mnemonicParsing="false" onAction="#DefineSeller" prefHeight="58.0" prefWidth="721.0" styleClass="record-sales" text="اضافة وتعديل التجار" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="39.0" />
+                  <Button mnemonicParsing="false" onAction="#BillCashier" prefHeight="58.0" prefWidth="721.0" styleClass="record-sales" text="فواتير التجار" />
+                  <Button mnemonicParsing="false" onAction="#BillBuyed" prefHeight="58.0" prefWidth="721.0" styleClass="record-sales" text="طلب شراء جديد" />
+                  <Line endX="720.0" fill="#1e1d1d" startX="-0.0" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="A3" prefHeight="200.0" prefWidth="760.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <VBox layoutX="20.0" layoutY="79.0" spacing="50.0">
+               <children>
+                  <Button layoutX="56.0" layoutY="96.0" mnemonicParsing="false" onAction="#UserAccount" prefHeight="58.0" prefWidth="704.0" styleClass="record-sales" text="تصاريح المستخدم" />
+                  <Button mnemonicParsing="false" onAction="#CompanyInformation" prefHeight="58.0" prefWidth="704.0" styleClass="record-sales" text="معلومات المحل" />
+                  <Line endX="600.0" layoutX="177.0" layoutY="161.0" startX="-100.0" />
+                  <Button mnemonicParsing="false" onAction="#Report" prefHeight="58.0" prefWidth="704.0" styleClass="record-sales" text="الخزينة والتقارير" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="A4" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="760.0" visible="false" AnchorPane.topAnchor="80.0">
+         <children>
+            <VBox layoutX="20.0" layoutY="79.0" spacing="50.0">
+               <children>
+                  <Button layoutX="56.0" layoutY="96.0" mnemonicParsing="false" onAction="#check" prefHeight="58.0" prefWidth="704.0" styleClass="record-sales" text="اضافة شيك" />
+                  <Line endX="600.0" layoutX="177.0" layoutY="161.0" startX="-100.0" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
