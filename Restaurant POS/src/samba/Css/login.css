@@ -1,0 +1,100 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+    -fx-background-color: #ffffff;
+    -fx-background-radius:  20px 20px 0px  0px; 
+
+}
+.top{
+
+    -fx-background-color: #ffffff;
+    -fx-background-radius:  20px 20px 20px  20px; 
+
+}
+.middle{
+
+
+    -fx-background-color: #666666;
+}
+.bottom{
+
+    -fx-background-color: #555555;
+
+}
+.username,.password{
+
+    -fx-font-size:15px;
+    -fx-background-color: #444444;
+    -fx-background-radius: 0px ;
+    -fx-padding: 0px 20px 0px 0px; 
+    -fx-text-fill: #ffffff;
+
+
+}
+.btn{
+    -fx-font-size:15px;
+    -fx-background-radius: 0px ;
+    -fx-background-color: #ff8b17;
+    -fx-text-fill: #ffffff;
+    
+    
+   
+    
+}
+.username:focused{
+    
+    -fx-effect: dropshadow(gaussian ,rgba(255,139,23,255),10, 0, 0,0 );
+}
+.password:focused{
+    -fx-effect: dropshadow(gaussian ,rgba(255,139,23,255),10, 0, 0,0 ); 
+}
+
+.btn:hover{
+    
+    -fx-background-color: #ff6f10;
+    -fx-border-color:#ff6f10;
+    
+    
+}
+.btn:pressed{
+ -fx-effect: dropshadow(gaussian ,rgba(255,255,255,255),10, 0, 0,0 ); 
+}
+
+.logo{
+    
+    -fx-background-image: url("../Image/login.PNG");
+}
+.logoError{
+    
+    -fx-background-image: url("../Image/error.PNG");
+    
+}
+.ttip{
+     //-fx-background-radius: 0 0 0 0;
+     //-fx-background-color: #ff6f10;
+     -fx-background-image: url("../Image/ttip.png");
+     -fx-background-color: transparent;
+ }
+ .btnEx{
+
+     //-fx-background-radius: 0px 0px 0px 5px ;
+     -fx-background-image: url("../Image/btnEx.png");
+     -fx-background-color: transparent;
+     
+ }
+ .btnEx:hover{
+
+     //-fx-background-radius: 0px 0px 0px 5px ;
+     -fx-background-image: url("../Image/btnExH.png");
+     -fx-background-color: transparent;
+     -fx-effect: dropshadow(gaussian ,rgba(255,139,23,255),10, 0, 0,0 );
+ }
+ .btnEx:pressed{
+     
+     
+       -fx-effect: dropshadow(gaussian ,rgba(255,0,0,0),10, 0, 0,0 );
+     
+ }

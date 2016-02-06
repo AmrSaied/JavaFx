@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="APM" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="main" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="samba.Controller.TablePageController">
+   <children>
+      <FlowPane fx:id="Category" layoutX="824.0" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="183.0" styleClass="btn" vgap="10.0" AnchorPane.bottomAnchor="65.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="80.0" />
+      <FlowPane fx:id="Product" hgap="20.0" layoutX="24.0" layoutY="80.0" prefHeight="176.0" prefWidth="785.0" styleClass="upbtn" vgap="10.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="215.0" AnchorPane.topAnchor="80.0" />
+      <TableView fx:id="tableproducat" layoutX="417.0" layoutY="280.0" maxHeight="400.0" maxWidth="420.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#removeItemByDelet" prefHeight="359.0" prefWidth="385.0" AnchorPane.bottomAnchor="129.0" AnchorPane.leftAnchor="417.0" AnchorPane.rightAnchor="222.0" AnchorPane.topAnchor="280.0">
+         <columns>
+            <TableColumn fx:id="type" prefWidth="75.0" styleClass="tablec" text="الاسم" />
+            <TableColumn fx:id="price" prefWidth="75.0" styleClass="tablec" text="السعر" />
+            <TableColumn fx:id="amout" prefWidth="75.0" text="الكمية" />
+            <TableColumn fx:id="total" prefWidth="75.0" text="الاجمالي" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="764.0" layoutY="9.0" prefHeight="64.0" prefWidth="322.0" styleClass="ticket" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="9.0">
+         <children>
+            <VBox alignment="CENTER_RIGHT" layoutX="9.0" layoutY="7.0" prefHeight="52.0" prefWidth="229.0" spacing="5.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="7.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" layoutX="667.0" layoutY="13.0" spacing="20.0">
+                     <children>
+                        <HBox spacing="30.0">
+                           <children>
+                              <HBox spacing="6.0">
+                                 <children>
+                                    <Label fx:id="ponid" prefHeight="17.0" prefWidth="52.0" text="Label" />
+                                    <Text layoutX="737.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  : رقم البون" textAlignment="RIGHT" wrappingWidth="69.13671875" AnchorPane.bottomAnchor="733.2353515625" AnchorPane.leftAnchor="737.0" AnchorPane.rightAnchor="237.86328125" AnchorPane.topAnchor="14.8134765625">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="6.0">
+                                 <children>
+                                    <Label fx:id="time" prefHeight="17.0" prefWidth="70.0" text="Label" />
+                                    <Text layoutX="927.0" layoutY="28.1865234375" strokeType="OUTSIDE" strokeWidth="0.0" text="  :الوقت" textAlignment="RIGHT" wrappingWidth="41.13671875" AnchorPane.bottomAnchor="737.98828125" AnchorPane.rightAnchor="17.86328125" AnchorPane.topAnchor="14.05078125">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" spacing="6.0">
+                     <children>
+                        <Label fx:id="date" text="Label" />
+                        <Text layoutX="968.0" layoutY="28.1865234375" strokeType="OUTSIDE" strokeWidth="0.0" text=": التاريخ" textAlignment="RIGHT" wrappingWidth="41.13671875" AnchorPane.bottomAnchor="703.98828125" AnchorPane.rightAnchor="18.86328125" AnchorPane.topAnchor="48.05078125">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="25.0" layoutY="597.0" prefHeight="109.0" prefWidth="396.0" styleClass="ticket" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="603.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="14.0" layoutY="13.0" spacing="10.0" AnchorPane.leftAnchor="14.0">
+               <children>
+                  <TextField fx:id="payedmoney" layoutX="472.0" layoutY="42.0" onKeyReleased="#payed" prefHeight="37.0" prefWidth="93.0" />
+                  <Text layoutX="565.0" layoutY="63.58203125" strokeType="OUTSIDE" strokeWidth="0.0" text="المدفوع" textAlignment="CENTER" wrappingWidth="64.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="213.0" layoutY="13.0" spacing="10.0" AnchorPane.rightAnchor="14.0">
+               <children>
+                  <Label fx:id="totalls" prefHeight="36.0" prefWidth="89.0" text="0.0" textFill="#ff1004">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Text fill="RED" layoutX="708.0" layoutY="63.58203125" strokeType="OUTSIDE" strokeWidth="0.0" text="الاجمالى" textAlignment="CENTER" wrappingWidth="70.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="86.0" layoutY="70.0" prefHeight="36.0" prefWidth="157.0">
+               <children>
+                  <Label fx:id="totalls1" prefHeight="36.0" prefWidth="89.0" text="0.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="الباقى" textAlignment="CENTER" wrappingWidth="72.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="431.0" layoutY="645.0" prefHeight="109.0" prefWidth="371.0" styleClass="ticket" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="222.0">
+         <children>
+            <VBox layoutX="9.0" layoutY="5.0" spacing="7.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+               <children>
+                  <HBox layoutX="9.0" layoutY="5.0" spacing="6.0">
+                     <children>
+                        <Button layoutX="11.0" layoutY="2.0" mnemonicParsing="false" onAction="#print" prefHeight="44.0" prefWidth="114.0" styleClass="bottonbtn" text="طباعة البون">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="130.0" layoutY="4.0" mnemonicParsing="false" onAction="#removeallItem" prefHeight="44.0" prefWidth="114.0" styleClass="bottonbtn" text="حذف الكل">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button contentDisplay="CENTER" layoutX="251.0" layoutY="4.0" mnemonicParsing="false" onAction="#removeItem" prefHeight="44.0" prefWidth="114.0" styleClass="bottonbtn" text="حذف" textAlignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="9.0" layoutY="55.0" spacing="6.0">
+                     <children>
+                        <Button contentDisplay="CENTER" layoutX="9.0" layoutY="55.0" mnemonicParsing="false" onAction="#CloseScene" prefHeight="44.0" prefWidth="175.0" styleClass="bottonbtn" text="خروج" textAlignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="188.0" layoutY="55.0" mnemonicParsing="false" onAction="#insertBuyed" prefHeight="44.0" prefWidth="175.0" styleClass="bottonbtn" text="طلب معلق">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="finish" mnemonicParsing="false" onAction="#finishorder" prefHeight="44.0" prefWidth="175.0" styleClass="bottonbtn" text="انهاء الطلب" visible="false">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="24.0" layoutY="280.0" prefHeight="359.0" prefWidth="379.0" styleClass="ticket" AnchorPane.bottomAnchor="129.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="280.0">
+         <children>
+            <VBox layoutX="17.0" layoutY="9.0" prefHeight="349.0" prefWidth="353.0" spacing="15.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="6.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="5.0" layoutY="14.0" prefHeight="30.0" prefWidth="347.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="TFamout" layoutX="5.0" layoutY="14.0" prefHeight="44.0" prefWidth="237.0" styleClass="btncalc" />
+                        <Button layoutX="308.0" layoutY="14.0" mnemonicParsing="false" onAction="#removeTFamout" prefHeight="44.0" prefWidth="57.0" styleClass="btncalc" text="ok" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="14.0" layoutY="62.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="n1" layoutX="14.0" layoutY="62.0" mnemonicParsing="false" onAction="#calc" prefHeight="60.0" prefWidth="114.0" styleClass="btncalc" text="1">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="n2" layoutX="128.0" layoutY="62.0" mnemonicParsing="false" onAction="#calc" prefHeight="60.0" prefWidth="114.0" styleClass="btncalc" text="2">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="n3" layoutX="261.0" layoutY="62.0" mnemonicParsing="false" onAction="#calc" prefHeight="60.0" prefWidth="114.0" styleClass="btncalc" text="3">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="14.0" layoutY="131.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="n4" layoutX="14.0" layoutY="62.0" mnemonicParsing="false" onAction="#calc" prefHeight="60.0" prefWidth="114.0" styleClass="btncalc" text="4">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="n5" layoutX="128.0" layoutY="62.0" mnemonicParsing="false" onAction="#calc" prefHeight="60.0" prefWidth="114.0" styleClass="btncalc" text="5">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="n6" layoutX="261.0" layoutY="62.0" mnemonicParsing="false" onAction="#calc" prefHeight="60.0" prefWidth="114.0" styleClass="btncalc" text="6">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="14.0" layoutY="204.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="n7" layoutX="14.0" layoutY="62.0" mnemonicParsing="false" onAction="#calc" prefHeight="60.0" prefWidth="114.0" styleClass="btncalc" text="7">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="n8" layoutX="128.0" layoutY="62.0" mnemonicParsing="false" onAction="#calc" prefHeight="60.0" prefWidth="114.0" styleClass="btncalc" text="8">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="n9" layoutX="261.0" layoutY="62.0" mnemonicParsing="false" onAction="#calc" prefHeight="60.0" prefWidth="114.0" styleClass="btncalc" text="9">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="14.0" layoutY="277.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="n10" layoutX="14.0" layoutY="62.0" mnemonicParsing="false" onAction="#calc" prefHeight="60.0" prefWidth="114.0" styleClass="btncalc" text=".">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="n11" layoutX="128.0" layoutY="62.0" mnemonicParsing="false" onAction="#calc" prefHeight="60.0" prefWidth="114.0" styleClass="btncalc" text="0">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="n12" layoutX="261.0" layoutY="62.0" mnemonicParsing="false" onAction="#calc" prefHeight="60.0" prefWidth="114.0" styleClass="btncalc" text="00">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="14.0" prefHeight="52.0" prefWidth="567.0" text="الطاولات" textAlignment="CENTER" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="345.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Arial" size="39.0" />
+         </font>
+      </Label>
+   </children>
+   <stylesheets>
+      <URL value="@../AppData/Roaming/Skype/Css/takeaway.css" />
+      <URL value="@../Css/takeaway.css" />
+   </stylesheets>
+</AnchorPane>

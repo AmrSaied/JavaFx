@@ -1,0 +1,78 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color: rgb(255, 250, 205);
+
+}
+
+.order{
+    -fx-background-image: url("../Image/order.png");
+}
+.button{
+
+
+    -fx-background-color: rgb(255, 127, 80);
+    -fx-text-fill: #ffffff;
+    -fx-font-size:15px;
+    -fx-background-radius: 0px ;
+    -fx-font-weight: bold;
+
+}
+.button:pressed{
+
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+.button:hover{
+
+    -fx-border-width: 2px;
+    -fx-border-color: #ffffff;
+
+}
+.timedate{
+
+    -fx-border-width: 3px;
+    -fx-border-style: dotted;
+    -fx-border-color: #999999;
+
+
+}
+.uptext{
+
+    -fx-background-color: rgb(210, 180, 140);
+    -fx-text-fill:#ffffff;
+}
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+
+}
+.table-view .column-header  {
+   -fx-background-color: rgb(210, 180, 140);
+     
+}
+
+.table-view{
+   -fx-base: rgb(210, 180, 140);
+    -fx-control-inner-background: #ffffff;;
+}
+.table-view:focused{
+-fx-background-color: #ffffff;
+-fx-base: rgb(210, 180, 140);
+ -fx-border-color:rgb(210, 180, 140);
+
+}
+
+.table-view .table-cell  {
+    -fx-alignment: center;
+    -fx-padding: 0.166667em; /* 2px, plus border adds 1px */
+    -fx-background-color: transparent;
+    -fx-border-color: transparent -fx-table-cell-border-color transparent transparent;
+    -fx-border-width: 0.183333em; /* 1 */
+    -fx-cell-size: 5.0em; /* 24 */
+    -fx-text-fill: -fx-text-inner-color;
+      -fx-font-size: 10px ;
+     
+}

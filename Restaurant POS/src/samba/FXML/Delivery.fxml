@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="AP3" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" stylesheets="@../Css/delivery.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="samba.Controller.DeliveryController">
+   <children>
+      <AnchorPane layoutX="688.0" layoutY="14.0" prefHeight="64.0" prefWidth="322.0" styleClass="timedate" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <Label layoutX="31.0" layoutY="14.0" prefHeight="64.0" prefWidth="102.0" styleClass="deliverylogo" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="14.0" />
+      <HBox layoutX="31.0" layoutY="90.0" spacing="20.0">
+         <children>
+            <AnchorPane fx:id="AP1" layoutX="31.0" layoutY="90.0" prefHeight="659.0" prefWidth="480.0" styleClass="timedate" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="90.0">
+               <children>
+                  <AnchorPane layoutX="17.0" layoutY="457.0" prefHeight="192.0" prefWidth="480.0" styleClass="timedate" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="6.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="174.0" prefWidth="448.0" spacing="5.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="7.0">
+                           <children>
+                              <Label fx:id="Erro_MassageD" text="Label" />
+                              <TextField fx:id="tfsearchD" alignment="CENTER" layoutX="28.0" layoutY="28.0" onKeyPressed="#SearchD" prefHeight="41.0" prefWidth="421.0" promptText="بحث" styleClass="search" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="28.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="194.0" layoutY="74.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#DeleteitemD" prefHeight="39.0" prefWidth="109.0" styleClass="userdelete" text="حذف" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="162.0" AnchorPane.topAnchor="74.0" />
+                              <HBox alignment="CENTER" layoutX="28.0" layoutY="118.0" spacing="15.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="68.0">
+                                 <children>
+                                    <Button layoutX="37.0" layoutY="89.0" mnemonicParsing="false" onAction="#updataitemD" prefHeight="45.0" prefWidth="118.0" text="حفظ" />
+                                    <Button layoutX="181.0" layoutY="89.0" mnemonicParsing="false" onAction="#FillTableD" prefHeight="45.0" prefWidth="118.0" text="تحديث" />
+                                    <Button layoutX="351.0" layoutY="83.0" mnemonicParsing="false" onAction="#insertDataDBD" prefHeight="45.0" prefWidth="118.0" text="جديد" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <VBox layoutX="17.0" layoutY="20.0" prefHeight="197.0" prefWidth="346.0" spacing="20.0" AnchorPane.bottomAnchor="445.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="17.0">
+                     <children>
+                        <TextField fx:id="TFCustomernameD" alignment="CENTER_RIGHT" layoutX="17.0" layoutY="148.0" prefHeight="35.0" prefWidth="372.0" />
+                        <TextField fx:id="TFAdreesD" alignment="CENTER_RIGHT" layoutX="17.0" layoutY="193.0" prefHeight="35.0" prefWidth="372.0" />
+                        <TextField fx:id="TFPhoneD" alignment="CENTER_RIGHT" layoutX="17.0" layoutY="238.0" prefHeight="35.0" prefWidth="372.0" />
+                        <TextField fx:id="TFnoteD" alignment="CENTER_RIGHT" layoutX="17.0" layoutY="283.0" prefHeight="35.0" prefWidth="372.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="407.0" layoutY="15.0" prefHeight="198.0" prefWidth="82.0" spacing="30.0" AnchorPane.rightAnchor="17.0">
+                     <children>
+                        <Text layoutX="921.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="اسم الموظف" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="921.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="الـــعنـــوان">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="921.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="رقم الهاتف">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="921.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ملاحــظات">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <TableView fx:id="tableCustomerD" layoutX="23.0" layoutY="228.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#SelecteditemD" AnchorPane.bottomAnchor="213.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="228.0">
+                     <columns>
+                        <TableColumn fx:id="TCustomernameD" prefWidth="112.0" text="اسم العميل " />
+                        <TableColumn fx:id="TAdreesD" prefWidth="112.0" text="العنوان" />
+                        <TableColumn fx:id="TPhoneD" prefWidth="112.0" text="رقم الهاتف" />
+                        <TableColumn fx:id="TnoteD" prefWidth="112.0" text="الحالة" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="AP2" layoutX="530.0" layoutY="90.0" prefHeight="659.0" prefWidth="480.0" styleClass="timedate" AnchorPane.bottomAnchor="19.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="90.0">
+               <children>
+                  <VBox layoutX="14.0" layoutY="15.0" spacing="20.0" AnchorPane.bottomAnchor="441.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="94.0" AnchorPane.topAnchor="15.0">
+                     <children>
+                        <TextField fx:id="TFCustomername" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="15.0" prefHeight="35.0" prefWidth="372.0" />
+                        <TextField fx:id="TFAdrees" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="70.0" prefHeight="35.0" prefWidth="372.0" />
+                        <TextField fx:id="TFPhone" alignment="CENTER_RIGHT" layoutX="25.0" layoutY="135.0" prefHeight="35.0" prefWidth="372.0" />
+                        <TextField fx:id="TFnote" alignment="CENTER_RIGHT" layoutX="16.0" layoutY="185.0" prefHeight="35.0" prefWidth="372.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="402.0" layoutY="19.0" spacing="30.0" AnchorPane.rightAnchor="6.0">
+                     <children>
+                        <Text layoutX="407.0" layoutY="40.58203125" strokeType="OUTSIDE" strokeWidth="0.0" text="اسم العميل " textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="407.0" layoutY="95.58203125" strokeType="OUTSIDE" strokeWidth="0.0" text="الـــعنـــوان">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="402.0" layoutY="156.58203125" strokeType="OUTSIDE" strokeWidth="0.0" text="رقم الهاتف">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="408.0" layoutY="210.58203125" strokeType="OUTSIDE" strokeWidth="0.0" text="ملاحــظات">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <TableView fx:id="tableCustomer" layoutX="13.0" layoutY="230.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#Selecteditem" AnchorPane.bottomAnchor="214.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="227.0">
+                    <columns>
+                      <TableColumn fx:id="TCustomername" prefWidth="113.0" text="اسم العميل " />
+                      <TableColumn fx:id="TAdrees" prefWidth="113.0" text="العنوان" />
+                        <TableColumn fx:id="TPhone" prefWidth="113.0" text="رقم الهاتف" />
+                        <TableColumn fx:id="Tnote" prefWidth="113.0" text="ملاحظات" />
+                    </columns>
+                  </TableView>
+                  <AnchorPane layoutX="14.0" layoutY="455.0" prefHeight="192.0" prefWidth="480.0" styleClass="timedate" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="3.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="28.0" layoutY="2.0" spacing="5.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="2.0">
+                           <children>
+                              <Label fx:id="Erro_Massage" />
+                              <TextField fx:id="tfsearch" alignment="CENTER" layoutX="28.0" layoutY="2.0" onKeyPressed="#Search" prefHeight="41.0" prefWidth="421.0" promptText="بحث" styleClass="search">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Button alignment="CENTER" contentDisplay="CENTER" layoutX="62.0" layoutY="38.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#Deleteitem" prefHeight="39.0" prefWidth="109.0" styleClass="userdelete" text="حذف" />
+                              <HBox alignment="CENTER" layoutX="37.0" layoutY="83.0" spacing="15.0">
+                                 <children>
+                                    <Button layoutX="37.0" layoutY="89.0" mnemonicParsing="false" onAction="#updataitem" prefHeight="45.0" prefWidth="118.0" text="حفظ" />
+                                    <Button layoutX="181.0" layoutY="89.0" mnemonicParsing="false" onAction="#FillTable" prefHeight="45.0" prefWidth="118.0" text="تحديث" />
+                                    <Button layoutX="351.0" layoutY="83.0" mnemonicParsing="false" onAction="#insertDataDB" prefHeight="45.0" prefWidth="118.0" text="جديد" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <Button layoutX="133.0" layoutY="20.0" mnemonicParsing="false" onAction="#CloseScene" prefHeight="45.0" prefWidth="147.0" text="خروج" />
+      <Button layoutX="496.0" layoutY="11.0" mnemonicParsing="false" onAction="#SendDelivery" prefHeight="64.0" prefWidth="69.0" styleClass="circle" text="تطبيق" AnchorPane.topAnchor="11.0" />
+      <Label fx:id="username" layoutY="746.0" prefHeight="17.0" prefWidth="153.0" text="البدر" />
+   </children>
+</AnchorPane>

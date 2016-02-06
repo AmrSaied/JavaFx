@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#LoginEnter" prefHeight="372.0" prefWidth="437.0" styleClass="mainFxmlClass" stylesheets="@../Css/login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="samba.Controller.LoginController">
+   <children>
+      <VBox>
+         <children>
+            <Pane prefHeight="132.0" prefWidth="437.0" styleClass="top">
+               <children>
+                  <Label fx:id="labelError" layoutX="144.0" layoutY="4.0" prefHeight="125.0" prefWidth="150.0" styleClass="logo" />
+                  <Button layoutX="406.0" layoutY="3.0" mnemonicParsing="false" onAction="#ExitSoft" prefHeight="30.0" prefWidth="30.0" styleClass="btnEx">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Label fx:id="labelError1" layoutX="144.0" layoutY="2.0" prefHeight="125.0" prefWidth="150.0" styleClass="logoError" visible="false" />
+               </children>
+            </Pane>
+            <Pane layoutY="132.0" prefHeight="203.0" prefWidth="437.0" styleClass="middle">
+               <children>
+                  <VBox layoutX="48.0" layoutY="30.0" spacing="15.0">
+                     <children>
+                        <TextField fx:id="username" alignment="CENTER_RIGHT" layoutX="48.0" layoutY="30.0" onKeyPressed="#LoginEnter" prefHeight="45.0" prefWidth="342.0" promptText="اسم المستخدم" styleClass="username">
+                           <tooltip>
+                              <Tooltip prefHeight="40.0" prefWidth="174.0" styleClass="ttip" />
+                           </tooltip></TextField>
+                        <PasswordField fx:id="password" alignment="CENTER_RIGHT" onKeyPressed="#LoginEnter" prefHeight="45.0" prefWidth="342.0" promptText="كــلمـة الســر" styleClass="password">
+                           <tooltip>
+                              <Tooltip prefHeight="40.0" prefWidth="174.0" styleClass="ttip" />
+                           </tooltip></PasswordField>
+                        <Button layoutX="48.0" layoutY="161.0" mnemonicParsing="false" onAction="#Login" onKeyPressed="#LoginEnter" prefHeight="37.0" prefWidth="342.0" styleClass="btn" text="تسجيل الدخول">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane layoutY="370.0" prefHeight="39.0" prefWidth="437.0" styleClass="bottom" />
+         </children>
+      </VBox>
+   </children>
+</Pane>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="1000.0" maxWidth="758.0" minHeight="877.0" minWidth="700.0" prefHeight="877.0" prefWidth="758.0" styleClass="mainFxmlClass" stylesheets="@../../../../WorkSpace/NeatBeans/JavaFX/Afaq/src/afaq/Css/insertdata.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="afaq.Controller.InsertDataController">
+   <children>
+      <Pane maxHeight="40.0" maxWidth="758.0" minHeight="40.0" minWidth="700.0" prefHeight="40.0" prefWidth="758.0" styleClass="header">
+         <children>
+            <HBox layoutX="411.0" spacing="20.0">
+               <children>
+                  <Button layoutX="361.0" mnemonicParsing="false" onAction="#SearchBarCode" prefHeight="39.0" prefWidth="63.0" styleClass="searchbill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="438.0" mnemonicParsing="false" onAction="#updataitem" prefHeight="39.0" prefWidth="77.0" styleClass="updatebill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="525.0" mnemonicParsing="false" onAction="#Deleteitem" prefHeight="39.0" prefWidth="65.0" styleClass="savebill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="608.0" mnemonicParsing="false" onAction="#insertData" prefHeight="39.0" prefWidth="68.0" styleClass="new">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <TextField fx:id="Search" alignment="CENTER" layoutX="164.0" layoutY="5.0" maxHeight="29.0" maxWidth="230.0" minHeight="20.0" minWidth="160.0" onKeyPressed="#SearchBarCode" prefHeight="29.0" prefWidth="230.0">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </TextField>
+            <Button layoutX="19.0" mnemonicParsing="false" onAction="#Close" prefHeight="39.0" prefWidth="106.0" styleClass="closewindow">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <VBox layoutX="676.0" layoutY="54.0" spacing="28.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="678.0" layoutY="52.0" maxHeight="20.0" maxWidth="64.0" minHeight="20.0" minWidth="38.0" prefHeight="20.0" prefWidth="64.0" text="رقم المنتج">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="684.0" layoutY="89.0" maxHeight="20.0" maxWidth="38.0" minHeight="20.0" minWidth="38.0" prefHeight="20.0" prefWidth="38.0" text="الصنف">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="674.0" layoutY="124.0" maxHeight="20.0" maxWidth="53.0" minHeight="20.0" minWidth="53.0" prefHeight="20.0" prefWidth="53.0" text="سعر البيع">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="664.0" layoutY="159.0" maxHeight="20.0" maxWidth="67.0" minHeight="20.0" minWidth="67.0" prefHeight="20.0" prefWidth="67.0" text="سعر الشراء">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <TextField fx:id="barcode" alignment="CENTER" cache="true" layoutX="369.0" layoutY="52.0" prefHeight="26.0" prefWidth="294.0" styleClass="labelbillnum">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Sell_price" alignment="CENTER" layoutX="533.0" layoutY="145.0" prefHeight="34.0" prefWidth="130.0" styleClass="disprice">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="pricebuy" alignment="CENTER" layoutX="535.0" layoutY="194.0" prefHeight="34.0" prefWidth="130.0" styleClass="disprice">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tableStock" layoutX="16.0" layoutY="257.0" maxHeight="226.0" maxWidth="727.0" minHeight="165.0" minWidth="654.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#Selecteditem" prefHeight="226.0" prefWidth="727.0" styleClass="S">
+         <columns>
+            <TableColumn fx:id="Tparcode" maxWidth="156.0" minWidth="156.0" prefWidth="40.0" text="رقم المنتج" />
+            <TableColumn fx:id="Tname" maxWidth="209.0" minWidth="209.0" prefWidth="40.0" text="الصنف" />
+            <TableColumn fx:id="TQTY" maxWidth="79.0" minWidth="79.0" prefWidth="40.0" text="الكمية" />
+            <TableColumn fx:id="Tpricebuy" maxWidth="136.0" minWidth="97.0" prefWidth="40.0" text="سعر البيع" />
+            <TableColumn fx:id="Tpricesell" prefWidth="83.0" text="سعر الشراء" />
+            <TableColumn fx:id="Tparcode1" maxWidth="156.0" minWidth="113.0" prefWidth="113.0" text="القسم" />
+         </columns>
+      </TableView>
+      <Label layoutX="330.0" layoutY="62.0" maxHeight="147.0" maxWidth="3.0" minHeight="147.0" minWidth="3.0" prefHeight="147.0" prefWidth="3.0" styleClass="hreg" text="Label" />
+      <Label alignment="CENTER_RIGHT" layoutX="225.0" layoutY="52.0" maxHeight="20.0" maxWidth="85.0" minHeight="20.0" minWidth="71.0" prefHeight="20.0" prefWidth="85.0" text="حد اعادة الطلب">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="222.0" layoutY="148.0" maxHeight="20.0" maxWidth="85.0" minHeight="20.0" minWidth="61.0" prefHeight="20.0" prefWidth="77.0" text="تاريخ الانتهاء">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="225.0" layoutY="100.0" maxHeight="20.0" maxWidth="67.0" minHeight="20.0" minWidth="67.0" prefHeight="20.0" prefWidth="67.0" text="الكمية المتوفرة">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="MIN_QTY" alignment="CENTER" layoutX="24.0" layoutY="56.0" maxHeight="26.0" maxWidth="186.0" minHeight="26.0" minWidth="122.0" prefHeight="26.0" prefWidth="186.0" styleClass="labelbillnum">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="QTY" alignment="CENTER" layoutX="24.0" layoutY="100.0" maxHeight="26.0" maxWidth="186.0" minHeight="26.0" minWidth="122.0" prefHeight="26.0" prefWidth="186.0" styleClass="labelbillnum">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="625.0" layoutY="489.0" maxHeight="15.0" maxWidth="85.0" minHeight="15.0" minWidth="85.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="15.0" prefWidth="85.0" text="اجمالى الاصناف:-" textFill="#035e6b">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalstock" alignment="CENTER" layoutX="543.0" layoutY="490.0" maxHeight="13.0" maxWidth="57.0" minHeight="13.0" minWidth="57.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="13.0" prefWidth="57.0">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="EXP_Data" layoutX="24.0" layoutY="147.0" prefHeight="25.0" prefWidth="186.0" />
+      <Label fx:id="Erro_Massage" layoutX="160.0" layoutY="203.0" textFill="#d71919">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="item" alignment="CENTER" layoutX="369.0" layoutY="100.0" maxHeight="26.0" maxWidth="294.0" prefHeight="26.0" prefWidth="294.0" styleClass="labelbillnum">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+      <HBox layoutX="23.0" layoutY="203.0" spacing="50.0">
+         <children>
+            <ComboBox layoutX="42.0" layoutY="206.0" prefHeight="25.0" prefWidth="193.0" />
+            <Label layoutX="247.0" layoutY="203.0" text="القسم">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <TableView fx:id="tableStock1" layoutX="468.0" layoutY="592.0" maxHeight="384.0" maxWidth="727.0" minHeight="165.0" minWidth="160.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#Selecteditem" prefHeight="261.0" prefWidth="265.0" styleClass="S">
+         <columns>
+            <TableColumn fx:id="Tparcode1" maxWidth="156.0" minWidth="131.0" prefWidth="20.0" text="اسم القسم " />
+            <TableColumn fx:id="Tparcode11" maxWidth="156.0" minWidth="131.0" prefWidth="20.0" text="ترتيب العرض" />
+         </columns>
+      </TableView>
+      <HBox layoutX="6.0" layoutY="652.0" spacing="50.0">
+         <children>
+            <TextField fx:id="item1" alignment="CENTER" layoutX="379.0" layoutY="110.0" maxHeight="26.0" maxWidth="294.0" prefHeight="26.0" prefWidth="294.0" styleClass="labelbillnum">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="694.0" layoutY="99.0" maxHeight="20.0" maxWidth="80.0" minHeight="20.0" minWidth="38.0" prefHeight="20.0" prefWidth="80.0" text="اسم القسم">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Pane layoutY="543.0" maxHeight="40.0" maxWidth="758.0" minHeight="40.0" minWidth="700.0" prefHeight="40.0" prefWidth="758.0" styleClass="header">
+         <children>
+            <HBox layoutX="411.0" spacing="20.0">
+               <children>
+                  <Button layoutX="361.0" mnemonicParsing="false" onAction="#SearchBarCode" prefHeight="39.0" prefWidth="63.0" styleClass="searchbill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="438.0" mnemonicParsing="false" onAction="#updataitem" prefHeight="39.0" prefWidth="77.0" styleClass="updatebill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="525.0" mnemonicParsing="false" onAction="#Deleteitem" prefHeight="39.0" prefWidth="65.0" styleClass="savebill">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="608.0" mnemonicParsing="false" onAction="#insertData" prefHeight="39.0" prefWidth="68.0" styleClass="new">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <TextField fx:id="Search1" alignment="CENTER" layoutX="164.0" layoutY="5.0" maxHeight="29.0" maxWidth="230.0" minHeight="20.0" minWidth="160.0" onKeyPressed="#SearchBarCode" prefHeight="29.0" prefWidth="230.0">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <TextField fx:id="Sell_price1" alignment="CENTER" layoutX="341.0" layoutY="192.0" prefHeight="34.0" prefWidth="130.0" styleClass="disprice">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="365.0" layoutY="148.0" maxHeight="20.0" maxWidth="97.0" minHeight="20.0" minWidth="53.0" prefHeight="20.0" prefWidth="97.0" text="ترتيب العرض">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="141.0" layoutY="712.0" maxHeight="20.0" maxWidth="97.0" minHeight="20.0" minWidth="53.0" prefHeight="20.0" prefWidth="97.0" text="ترتيب العرض">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Sell_price11" alignment="CENTER" layoutX="117.0" layoutY="739.0" prefHeight="34.0" prefWidth="130.0" styleClass="disprice">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="totalstock1" alignment="CENTER" layoutX="517.0" layoutY="857.0" maxHeight="13.0" maxWidth="57.0" minHeight="13.0" minWidth="57.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="13.0" prefWidth="57.0">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="599.0" layoutY="856.0" maxHeight="15.0" maxWidth="85.0" minHeight="15.0" minWidth="85.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="15.0" prefWidth="85.0" text="اجمالى الاقسام" textFill="#035e6b">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+
+.mainFxmlClass {
+    -fx-background-color: rgb(255, 250, 205);
+}
+
+
+.button{
+    -fx-background-color:rgb(255, 127, 80);
+    -fx-text-fill: #ffffff;
+    -fx-font-size:20px;
+    -fx-background-radius: 0px ;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian ,rgb(255, 127, 80),5.5, 5, 0,0 ); 
+}
+
+.button:pressed{
+-fx-effect: dropshadow(gaussian ,rgb(255, 127, 80),0, 0, 0,0 ); 
+}
+
+.delivery {
+    -fx-background-image: url("../Image/maindelivery.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+
+.help {
+    -fx-background-image: url("../Image/helplogo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.table{
+    -fx-background-image: url("../Image/tablelogo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.takeaway{
+    -fx-background-image: url("../Image/takeawaylogo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+.order{
+    -fx-background-image: url("../Image/orderlogo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.setting{
+
+    -fx-background-image: url("../Image/settinglogo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.exit{
+
+    -fx-background-image: url("../Image/exitlogo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.report{
+
+    -fx-background-image: url("../Image/reportlogo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.shop{
+    -fx-background-image: url("../Image/shoplogo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}

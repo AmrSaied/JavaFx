@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" styleClass="mainFxmlClass" stylesheets="@../Css/order.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="samba.Controller.OrderController">
+   <children>
+      <Pane layoutX="35.0" layoutY="12.0" prefHeight="64.0" prefWidth="51.0" styleClass="order" />
+      <VBox alignment="CENTER" layoutX="16.0" layoutY="105.0" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="363.0" AnchorPane.topAnchor="105.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="678.0" styleClass="uptext" text="خدمات التوصيل المفعلة">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableDelivery" layoutX="35.0" layoutY="161.0224609375" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#CliclTdeli" prefHeight="568.0" prefWidth="645.0" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="344.0" AnchorPane.topAnchor="171.0">
+               <columns>
+                  <TableColumn fx:id="pon_id" prefWidth="75.0" text="رقم البون" />
+                  <TableColumn fx:id="Emp_name" prefWidth="116.0" text="اسم الموظف" />
+                  <TableColumn fx:id="cus_name" prefWidth="101.0" text="اسم العميل " />
+                  <TableColumn fx:id="Address" minWidth="0.0" prefWidth="78.0" text="المكان" />
+                  <TableColumn fx:id="tel" prefWidth="74.0" text="رقم الهاتف" />
+                  <TableColumn fx:id="tot_price" prefWidth="200.0" text="الاجمالى" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="677.0" layoutY="105.0" prefHeight="602.0" prefWidth="336.0" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="677.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="105.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="384.0" styleClass="uptext" text="الطاولات المشغولة">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="Ttable" layoutX="708.0" layoutY="171.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#ClicTable" prefHeight="568.0" prefWidth="302.0" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="708.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="171.0">
+              <columns>
+                <TableColumn fx:id="Tponid" prefWidth="110.0" text="رقم البون" />
+                <TableColumn fx:id="Ttablenumber" prefWidth="110.0" text="رقم الطاولة" />
+                  <TableColumn fx:id="Ttotall" prefWidth="110.0" text="المجموع" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <Button layoutX="191.0" layoutY="13.0" mnemonicParsing="false" onAction="#CloseScene" prefHeight="45.0" prefWidth="147.0" text="خروج" AnchorPane.topAnchor="13.0" />
+   </children>
+</AnchorPane>

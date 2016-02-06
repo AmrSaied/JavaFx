@@ -1,0 +1,102 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.main {
+    -fx-background-color: rgb(255, 250, 205);
+}
+.bottomPane{
+
+    -fx-background-color: rgb(210, 180, 140);
+
+}
+.btn .button{
+
+    -fx-background-color: rgb(255, 127, 80);
+    -fx-text-fill: #ffffff;
+    -fx-font-size:15px;
+    -fx-background-radius: 0px ;
+    -fx-font-weight: bold;
+
+}
+.btn .button:pressed{
+
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+.btn .button:hover{
+
+    -fx-border-width: 2px;
+    -fx-border-color: #ffffff;
+
+}
+.btn .button:focused{
+
+    -fx-background-color:#000000;
+
+}
+.upbtn .button{
+    -fx-background-color: rgb(210, 180, 140);
+    -fx-text-fill: #ffffff;
+    -fx-font-size:15px; 
+    -fx-font-weight: bold;
+
+
+}
+
+.upbtn .button:hover{
+    -fx-border-width: 2px;
+    -fx-border-color: #ffffff;
+
+}
+.logo{
+    -fx-background-color: #000000;
+
+}
+.upbtn .button:pressed{
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+.uppane{
+    -fx-background-color: #000000;
+}
+.ticket{
+
+    -fx-border-width: 3px;
+    -fx-border-style: dotted;
+    -fx-border-color: #999999;
+}
+.bottonbtn{
+
+    -fx-background-color: rgb(210, 180, 140);
+    -fx-text-fill: #ffffff;
+}
+
+.bottonbtn:hover{
+    -fx-background-color: rgb(139, 69, 19);
+}
+.bottonbtn:pressed{
+    -fx-text-fill: #ff9900;
+}
+.btncalc{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-border-color: #999999;
+    -fx-border-width: .5px;
+    -fx-font-size:15px;
+    -fx-background-radius: 0px ;
+    -fx-font-weight: bold; 
+
+
+
+
+
+}
+.btncalc:hover{
+
+    -fx-background-color:rgb(210, 180, 140);
+    -fx-text-fill: #ffffff;
+}
+.btncalc:pressed{
+    -fx-background-color: rgb(255, 127, 80);
+}
